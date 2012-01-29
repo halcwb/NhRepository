@@ -2,7 +2,7 @@
 using Informedica.DataAccess.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Informedica.NHibernateRepository.Tests
+namespace Informedica.NhRepository.xTests
 {
     [TestClass]
     public class EntityTestsThat

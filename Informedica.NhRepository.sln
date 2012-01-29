@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informedica.NhRepository", "Informedica.DataAccess\Informedica.NhRepository.csproj", "{A7844906-1F6F-4AD9-BA9A-D70E501CDC98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informedica.NhRepository", "Informedica.NhRepository\Informedica.NhRepository.csproj", "{A7844906-1F6F-4AD9-BA9A-D70E501CDC98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informedica.NhRepository.xTests", "Informedica.DataAccess.Tests\Informedica.NhRepository.xTests.csproj", "{18994E51-D6DF-41B8-BF5E-70DDC1F24173}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informedica.NhRepository.xTests", "Informedica.NhRepository.xTests\Informedica.NhRepository.xTests.csproj", "{18994E51-D6DF-41B8-BF5E-70DDC1F24173}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Informedica.DataAccess.Repositories;
+using Informedica.DataAccess.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Informedica.DataAccess.Tests
+namespace Informedica.NhRepository.xTests
 {
     [TestClass]
     public class AnEntityRepositoryShould
@@ -26,7 +26,7 @@ namespace Informedica.DataAccess.Tests
         public void HaveZeroItemsWhenFirstCreated()
         {
             var repos = RepositoryFixture.CreateIntEntityRepository();
-            Assert.AreEqual(0, repos.Count());
+            Assert.AreEqual(0, repos.Count);
         }
 
         [TestMethod]

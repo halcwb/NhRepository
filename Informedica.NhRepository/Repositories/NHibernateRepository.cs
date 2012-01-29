@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Informedica.DataAccess.Entities;
+using Informedica.EntityRepository;
+using Informedica.EntityRepository.Entities;
 using NHibernate;
 using NHibernate.Linq;
 
-namespace Informedica.DataAccess.Repositories
+namespace Informedica.NhRepository.NHibernate
 {
-    public abstract class NHibernateRepository<TEnt, TId> : NHibernateBase, IRepository<TEnt, TId>
-        where TEnt : IEntity<TEnt, TId>
+    public class NHibernateRepository<TEnt, TId> : NHibernateBase, IRepository<TEnt, TId>
+        where TEnt : class, IEntity<TEnt, TId>
     {
         #region Repository
 
-        protected NHibernateRepository(ISessionFactory factory) : base(factory) { }
+        public NHibernateRepository(ISessionFactory factory) : base(factory) { }
 
         public IEnumerator<TEnt> GetEnumerator()
         {
@@ -43,8 +44,6 @@ namespace Informedica.DataAccess.Repositories
 
         #region Add and Remove
 
-        public abstract void Add(TEnt item);
-
         public virtual void Add(TEnt item, IEqualityComparer<TEnt> comparer)
         {
             // Need to check
@@ -55,8 +54,12 @@ namespace Informedica.DataAccess.Repositories
 
         public virtual bool Contains(TEnt item)
         {
-            if (item.IsTransient()) return false;
             return Transact(() => Session.Get<TEnt>(item.Id)) != null;
+        }
+
+        public virtual void Add(TEnt entity)
+        {
+            Transact(() => Session.Save(entity));
         }
 
         public virtual void Remove(TEnt item)
@@ -68,10 +71,13 @@ namespace Informedica.DataAccess.Repositories
             Transact(() => Session.Delete(item));
         }
 
+        public virtual void Remove(TId id)
+        {
+            var ent = GetById(id);
+            Remove(ent);
+        }
+
         #endregion
 
-        #region Session Management
-
-        #endregion
     }
 }

@@ -1,4 +1,4 @@
-using Informedica.DataAccess.Entities;
+using Informedica.EntityRepository.Entities;
 
 namespace Informedica.DataAccess.Tests
 {
@@ -18,19 +18,28 @@ namespace Informedica.DataAccess.Tests
 
     }
 
-    public class TestEntity: Entity<TestEntity, int>
+    public class TestEntity: IEntity<TestEntity, int>
     {
-
-        public TestEntity(int id) : base(id) {}
+        public TestEntity(int id)
+        {
+            Id = id;
+        }
 
         public string Name { get; set; }
 
         #region Overrides of Entity<TestEntity,int>
 
-        public override bool IsIdentical(TestEntity entity)
+        public bool IsIdentical(TestEntity entity)
         {
             return Name == entity.Name;
         }
+
+        public bool IsTransient()
+        {
+            return Id == default(int);
+        }
+
+        public int Id { get; private set; }
 
         #endregion
     }

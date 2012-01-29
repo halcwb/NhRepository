@@ -9,8 +9,8 @@
     <ProjectGuid>{18994E51-D6DF-41B8-BF5E-70DDC1F24173}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Informedica.DataAccess.Tests</RootNamespace>
-    <AssemblyName>Informedica.DataAccess.Tests</AssemblyName>
+    <RootNamespace>Informedica.NhRepository.xTests</RootNamespace>
+    <AssemblyName>Informedica.NhRepository.xTests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -67,6 +67,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Informedica.EntityRepository">
+      <HintPath>..\packages\Informedica.EntityRepository.1.0.0.0\lib\net40\Informedica.EntityRepository.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="NHibernate">
       <HintPath>..\..\GenForm\packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
@@ -85,14 +88,12 @@
   <ItemGroup>
     <Compile Include="EntityFixture.cs" />
     <Compile Include="EntityTestsThat.cs" />
-    <Compile Include="NHibernateRepositoryShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AnEntityRepositoryShould.cs" />
     <Compile Include="RepositoryFixture.cs" />
-    <Compile Include="RepositoryInstantiatedWithNHibernateTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Informedica.DataAccess\Informedica.NhRepository.csproj">
+    <ProjectReference Include="..\Informedica.NhRepository\Informedica.NhRepository.csproj">
       <Project>{A7844906-1F6F-4AD9-BA9A-D70E501CDC98}</Project>
       <Name>Informedica.NhRepository</Name>
     </ProjectReference>

@@ -9,7 +9,7 @@ namespace Informedica.NhRepository.xTests
         [TestMethod]
         public void ThatEntityCanBeIdentifiedByAnId()
         {
-            var repos = RepositoryFixture.CreateIntEntityRepository();
+            var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
             var ent = EntityFixture.CreateIntIdEntity();
             repos.Add(ent);
 
@@ -21,7 +21,7 @@ namespace Informedica.NhRepository.xTests
         {
             var ent = EntityFixture.CreateEntityWithId(1);
             ent.Name = "TestEntity";
-            var repos = RepositoryFixture.CreateIntEntityRepository();
+            var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
             repos.Add(ent);
 
             Assert.AreEqual(ent, repos.SingleOrDefault(e => e.IsIdentical(ent)));

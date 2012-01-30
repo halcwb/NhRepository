@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using Informedica.EntityRepository;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Informedica.NhRepository.xTests
@@ -23,74 +22,60 @@ namespace Informedica.NhRepository.xTests
         [TestMethod]
         public void HaveZeroItemsWhenFirstCreated()
         {
-            var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
-            Assert.AreEqual(0, repos.Count);
+            var repos = GetRepository();
+            Tests.HaveZeroItemsWhenFirstCreated(repos);
+        }
+
+        private static IRepository<TestEntity, int> GetRepository()
+        {
+            return RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
         }
 
         [TestMethod]
         public void ThrowAnErrorWhenANullReferenceIsAdded()
         {
-            try
-            {
-                var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
-                repos.Add(null);
-                Assert.Fail("Repository should throw an error when null is added");
-            }
-            catch (Exception e)
-            {
-                Assert.IsNotInstanceOfType(e, typeof(AssertFailedException));
-            }
+            var repos = GetRepository();
+            Tests.ThrowAnErrorWhenANullReferenceIsAdded(repos);
         }
 
         [TestMethod]
         public void HaveOneItemWhenAnEntityIsAdded()
         {
-            var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
-            repos.Add(EntityFixture.CreateIntIdEntity());
+            var repos = GetRepository();
+            var ent = EntityFixture.CreateEntityWithId(1);
 
-            Assert.AreEqual(1, repos.Count);
+            Tests.HaveOneItemWhenAnEntityIsAdded(repos, ent);
         }
 
         [TestMethod]
         public void ReturnTheEntityThatWasAdded()
         {
-            var repos = RepositoryFixture.CreateIntEntityRepository();
+            var repos = GetRepository();
             var ent = EntityFixture.CreateIntIdEntity();
-            repos.Add(ent);
 
-            Assert.AreEqual(ent, repos.First());
+            Tests.ReturnTheEntityThatWasAdded(repos, ent);
         }
 
         [TestMethod]
         public void HaveTwoItemsWhenTwoEntitiesAreAdded()
         {
-            var repos = RepositoryFixture.CreateIntEntityRepository();
+            var repos = GetRepository();
             var ent1 = EntityFixture.CreateEntityWithId(1);
-            ent1.Name = "Entity1";
             var ent2 = EntityFixture.CreateEntityWithId(2);
-            ent2.Name = "Entity2";
-            repos.Add(ent1);
-            repos.Add(ent2);
 
-            Assert.AreEqual(2, repos.Count());
+            ent1.Name = "Entity1";
+            ent2.Name = "Entity2";
+
+            Tests.HaveTwoItemsWhenTwoEntitiesAreAdded(repos, ent1, ent2);
         }
 
         [TestMethod]
         public void NotAcceptTheSameEntityTwice()
         {
-            try
-            {
-                var repos = RepositoryFixture.CreateIntEntityRepository();
-                var ent = EntityFixture.CreateIntIdEntity();
-
-                repos.Add(ent);
-                repos.Add(ent);
-                Assert.Fail("Repository should not acccept the same entity twice");
-            }
-            catch (Exception e)
-            {
-                Assert.IsNotInstanceOfType(e, typeof(AssertFailedException));
-            }
+            var repos = GetRepository();
+            var ent = EntityFixture.CreateEntityWithId(1);
+                
+            Tests.NotAcceptTheSameEntityTwice(repos, ent);
         }
 
         [TestMethod]
@@ -98,115 +83,66 @@ namespace Informedica.NhRepository.xTests
         {
             var ent1 = EntityFixture.CreateEntityWithId(1);
             var ent2 = EntityFixture.CreateEntityWithId(1);
-            var repos = RepositoryFixture.CreateIntEntityRepository();
-
-            repos.Add(ent1);
-
-            try
-            {
-                repos.Add(ent2);
-                Assert.Fail("A different entity with the same id cannot be added");
-            }
-            catch (Exception e)
-            {
-                Assert.IsNotInstanceOfType(e, typeof(AssertFailedException));
-            }
+            var repos = GetRepository();
+            
+            Tests.NotAcceptADifferentEntityWithTheSameId(repos, ent1, ent2);
         }
 
         [TestMethod]
         public void ReturnAnEntityById()
         {
             var ent1 = EntityFixture.CreateEntityWithId(1);
-            ent1.Name = "TestIdentity1";
+            ent1.Name = "Entity1";
             var ent2 = EntityFixture.CreateEntityWithId(2);
-            ent2.Name = "TestIdentity2";
-            var repos = RepositoryFixture.CreateIntEntityRepository();
-
-            repos.Add(ent1);
-            repos.Add(ent2);
-            Assert.AreEqual(ent1, repos.Single(e => e.Id.Equals(ent1.Id)));
-            Assert.AreEqual(ent2, repos.Single(e => e.Id.Equals(ent2.Id)));
+            ent2.Name = "Entity2";
+            var repos = GetRepository();
+            
+            Tests.ReturnAnEntityById(repos, ent1, ent2);
         }
 
         [TestMethod]
         public void NotAcceptAnEntityWithTheSameIdentityTwice()
         {
             var ent1 = EntityFixture.CreateEntityWithId(1);
-            ent1.Name = "Entity1";
             var ent2 = EntityFixture.CreateEntityWithId(2);
-            ent2.Name = "Entity1";
-            var repos = RepositoryFixture.CreateIntEntityRepository();
-
-            repos.Add(ent1);
-            try
-            {
-                repos.Add(ent2);
-                Assert.Fail("An entity with the same identity should not be accepted twice");
-            }
-            catch (Exception e)
-            {
-                Assert.IsNotInstanceOfType(e, typeof(AssertFailedException));
-            }
+            var repos = GetRepository();
+            
+            Tests.NotAcceptAnEntityWithTheSameIdentityTwice(repos, ent1, ent2);
         }
 
         [TestMethod]
         public void RemoveTestEntity()
         {
             var ent1 = EntityFixture.CreateEntityWithId(1);
-            ent1.Name = "Entity1";
-            var repos = RepositoryFixture.CreateIntEntityRepository();
-
-            repos.Add(ent1);
-            Assert.AreEqual(1, repos.Count());
-
-            repos.Remove(ent1);
-            Assert.AreEqual(0, repos.Count());
+            var repos = GetRepository();
+            
+            Tests.RemoveTestEntity(repos, ent1);
         }
 
         [TestMethod]
         public void RemoveTestEntityById()
         {
-            var id = 1;
-            var ent1 = EntityFixture.CreateEntityWithId(id);
-            ent1.Name = "TestEntity1";
-            var repos = RepositoryFixture.CreateIntEntityRepository();
-
-            repos.Add(ent1);
-            repos.Remove(id);
-            Assert.AreEqual(0, repos.Count());
+            var ent1 = EntityFixture.CreateEntityWithId(1);
+            var repos = GetRepository();
+            
+            Tests.RemoveTestEntityById(repos, ent1);
         }
 
         [TestMethod]
         public void ThrowAnErrorWhenTryingToRemoveNullReference()
         {
-            var repos = RepositoryFixture.CreateIntEntityRepository();
-
-            try
-            {
-                repos.Remove(null);
-                Assert.Fail("Repository can not remover null reference");
-            }
-            catch (Exception e)
-            {
-                Assert.IsNotInstanceOfType(e, typeof(AssertFailedException));
-            }            
+            var repos = GetRepository();
+            
+            Tests.ThrowAnErrorWhenTryingToRemoveNullReference(repos);
         }
 
         [TestMethod]
         public void ThrowAnErrorWhenTryingToRemoveNonAddedEntity()
         {
             var ent = EntityFixture.CreateIntIdEntity();
-            var repos = RepositoryFixture.CreateIntEntityRepository();
-
-            try
-            {
-                repos.Remove(ent);
-                Assert.Fail("Repository can not remove an entity it does not contain");
-            }
-            catch (Exception e)
-            {
-                Assert.IsNotInstanceOfType(e, typeof(AssertFailedException));
-            }
+            var repos = GetRepository();
+            
+            Tests.ThrowAnErrorWhenTryingToRemoveNonAddedEntity(repos, ent);
         }
 
     }

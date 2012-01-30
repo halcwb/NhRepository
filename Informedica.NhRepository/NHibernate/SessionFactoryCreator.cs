@@ -1,4 +1,5 @@
-﻿using FluentNHibernate.Cfg;
+﻿using System.Data;
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using HibernatingRhinos.Profiler.Appender.NHibernate;
 using Informedica.GenForm.DataAccess.Databases;
@@ -11,7 +12,7 @@ namespace Informedica.NhRepository.NHibernate
 {
     public class SessionFactoryCreator<TMap>
     {
-        private Configuration _configuration;
+        private static Configuration _configuration;
         private string _exportPath;
         private string _logPath;
         private IDatabaseConfig _dbConfig;
@@ -34,6 +35,10 @@ namespace Informedica.NhRepository.NHibernate
             _dbConfig = config;
         }
 
+        public static void BuildSchema(IDbConnection connection)
+        {
+            new SchemaExport(_configuration).Execute(false, true, false, connection, null);
+        }
 
         public void BuildSchema()
         {
@@ -75,6 +80,7 @@ namespace Informedica.NhRepository.NHibernate
                 .Database(GetDatabase(string.Empty))
                 .Mappings(x => x.FluentMappings.AddFromAssemblyOf<TMap>())
                 .CurrentSessionContext<ThreadStaticSessionContext>()
+                .ExposeConfiguration(x => x.SetProperty("connection.release_mode", "on_close"))
                 .ExposeConfiguration(cfg => _configuration = cfg);
         }
 

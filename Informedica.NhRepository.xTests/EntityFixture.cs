@@ -1,5 +1,3 @@
-using Informedica.EntityRepository.Entities;
-
 namespace Informedica.NhRepository.xTests
 {
     static internal class EntityFixture
@@ -11,13 +9,12 @@ namespace Informedica.NhRepository.xTests
 
         public static TestEntity CreateEntityWithId(int id)
         {
-            var ent = new TestEntity(id) {Name = "TestEntity"};
-            return ent;
+            return new TestEntity(id) {Name = "TestEntity"};
         }
 
     }
 
-    public class TestEntity: IEntity<TestEntity, int>
+    public class TestEntity: EntityRepository.Tests.TestEntity
     {
         protected TestEntity() {}
 
@@ -26,22 +23,11 @@ namespace Informedica.NhRepository.xTests
             Id = id;
         }
 
-        public virtual string Name { get; set; }
-
-        #region Overrides of Entity<TestEntity,int>
-
-        public virtual bool IsIdentical(TestEntity entity)
+        public virtual string Name
         {
-            return Name == entity.Name;
+            get { return base.Name; }
+            set { base.Name = value; }
         }
-
-        public virtual bool IsTransient()
-        {
-            return Id == default(int);
-        }
-
-        public virtual int Id { get; protected set; }
-
-        #endregion
+        
     }
 }

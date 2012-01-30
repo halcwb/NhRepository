@@ -1,5 +1,5 @@
 ﻿using Informedica.EntityRepository.Entities;
-using Informedica.NhRepository.NHibernate;
+using Informedica.NhRepository.Repositories;
 using NHibernate;
 
 namespace Informedica.NhRepository

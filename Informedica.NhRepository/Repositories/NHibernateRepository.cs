@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Informedica.EntityRepository;
 using Informedica.EntityRepository.Entities;
+using Informedica.NhRepository.NHibernate;
 using NHibernate;
 using NHibernate.Linq;
 
-namespace Informedica.NhRepository.NHibernate
+namespace Informedica.NhRepository.Repositories
 {
     public class NHibernateRepository<TEnt, TId> : NHibernateBase, IRepository<TEnt, TId>
         where TEnt : class, IEntity<TEnt, TId>
@@ -54,7 +55,7 @@ namespace Informedica.NhRepository.NHibernate
 
         public virtual bool Contains(TEnt item)
         {
-            return Transact(() => Session.Get<TEnt>(item.Id)) != null;
+            return Transact(() => Session.Get<TEnt>(item.Id) != null);
         }
 
         public virtual void Add(TEnt entity)
@@ -64,10 +65,6 @@ namespace Informedica.NhRepository.NHibernate
 
         public virtual void Remove(TEnt item)
         {
-            // ToDo: Check tests whether this can be avoided
-            // item can be removed by removal of associated item
-            if (!Contains(item)) return;
-
             Transact(() => Session.Delete(item));
         }
 

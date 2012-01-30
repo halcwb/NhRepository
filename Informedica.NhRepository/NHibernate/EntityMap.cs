@@ -4,7 +4,7 @@ using Informedica.EntityRepository.Entities;
 namespace Informedica.NhRepository.NHibernate
 {
     public abstract class EntityMap<TEnt, TId> : ClassMap<TEnt>
-        where TEnt: IEntity<TEnt, TId> 
+        where TEnt:class, IEntity<TEnt, TId> 
     {
         protected EntityMap()
         {
@@ -13,7 +13,7 @@ namespace Informedica.NhRepository.NHibernate
 
         private void Map()
         {
-            Id(x => x.Id).GeneratedBy.Increment();
+            Id(x => x.Id).GeneratedBy.Identity();
             SelectBeforeUpdate();
         }
     }

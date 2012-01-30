@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using Informedica.DataAccess.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Informedica.NhRepository.xTests
@@ -8,24 +7,23 @@ namespace Informedica.NhRepository.xTests
     [TestClass]
     public class AnEntityRepositoryShould
     {
+        private static readonly EntityRepository.Tests.AnEntityRepositoryShould Tests = new EntityRepository.Tests.AnEntityRepositoryShould();
+
         [TestMethod]
         public void ThrowAnErrorWhenInitiatedWithAnNullReference()
         {
-            try
-            {
-                new Repository<TestEntity, int>(null);
-                Assert.Fail("Repository should not be created with empty list");
-            }
-            catch (Exception e)
-            {
-                Assert.IsNotInstanceOfType(e, typeof(AssertFailedException));
-            }
+            Tests.ThrowAnErrorWhenInitiatedWithAnNullReference(CreateRepositoryWithNullReference);
+        }
+
+        private static void CreateRepositoryWithNullReference()
+        {
+            new EntityRepository.Repository<TestEntity, int>(null);
         }
 
         [TestMethod]
         public void HaveZeroItemsWhenFirstCreated()
         {
-            var repos = RepositoryFixture.CreateIntEntityRepository();
+            var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
             Assert.AreEqual(0, repos.Count);
         }
 
@@ -34,7 +32,7 @@ namespace Informedica.NhRepository.xTests
         {
             try
             {
-                var repos = RepositoryFixture.CreateIntEntityRepository();
+                var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
                 repos.Add(null);
                 Assert.Fail("Repository should throw an error when null is added");
             }
@@ -47,7 +45,7 @@ namespace Informedica.NhRepository.xTests
         [TestMethod]
         public void HaveOneItemWhenAnEntityIsAdded()
         {
-            var repos = RepositoryFixture.CreateIntEntityRepository();
+            var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
             repos.Add(EntityFixture.CreateIntIdEntity());
 
             Assert.AreEqual(1, repos.Count);

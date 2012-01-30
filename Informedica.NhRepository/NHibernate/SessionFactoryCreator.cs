@@ -1,5 +1,6 @@
 ﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+using HibernatingRhinos.Profiler.Appender.NHibernate;
 using Informedica.GenForm.DataAccess.Databases;
 using NHibernate;
 using NHibernate.Cfg;
@@ -16,6 +17,10 @@ namespace Informedica.NhRepository.NHibernate
         private IDatabaseConfig _dbConfig;
         private string _connectionString;
 
+        static SessionFactoryCreator() { NHibernateProfiler.Initialize(); } 
+
+        public SessionFactoryCreator() {} 
+
         public SessionFactoryCreator(IDatabaseConfig config, string connectionString, string exportPath, string logPath)
         {
             _dbConfig = config;
@@ -24,18 +29,35 @@ namespace Informedica.NhRepository.NHibernate
             _connectionString = connectionString;
         }
 
-        public ISessionFactory CreateSessionFactory()
+        public SessionFactoryCreator(IDatabaseConfig config)
         {
-            return CreateSessionFactory("GenFormTest");
+            _dbConfig = config;
         }
 
-        public void BuildSchema(ISession session)
+
+        public void BuildSchema()
         {
             // first drop the database to recreate a new one
             // new SchemaExport(config).Drop(false, true);
             // this NHibernate tool takes a configuration (with mapping info in)
             // and exports a database schema from it
-            new SchemaExport(_configuration).Execute(false, true, false, session.Connection, null);
+            new SchemaExport(_configuration).Execute(false, true, false, _dbConfig.GetConnection(), null);
+        }
+
+        public ISessionFactory CreateInMemorySqlLiteFactory()
+        {
+            _dbConfig = new SqlLiteConfig();
+            var fact = GetFluentConfiguration().BuildSessionFactory();
+            BuildSchema();
+            var session = fact.OpenSession(_dbConfig.GetConnection());
+            CurrentSessionContext.Bind(session);
+
+            return fact;
+        }
+
+        public ISessionFactory CreateSessionFactory()
+        {
+            return GetFluentConfiguration().BuildSessionFactory();
         }
 
         public ISessionFactory CreateSessionFactory(string environment)
@@ -46,6 +68,15 @@ namespace Informedica.NhRepository.NHibernate
             return GetFluentConfiguration(connectString).BuildSessionFactory();
         }
 
+
+        private FluentConfiguration GetFluentConfiguration()
+        {
+            return Fluently.Configure()
+                .Database(GetDatabase(string.Empty))
+                .Mappings(x => x.FluentMappings.AddFromAssemblyOf<TMap>())
+                .CurrentSessionContext<ThreadStaticSessionContext>()
+                .ExposeConfiguration(cfg => _configuration = cfg);
+        }
 
         private FluentConfiguration GetFluentConfiguration(string connectString)
         {

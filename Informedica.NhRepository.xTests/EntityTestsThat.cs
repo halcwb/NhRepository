@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using Informedica.DataAccess.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Informedica.NhRepository.xTests

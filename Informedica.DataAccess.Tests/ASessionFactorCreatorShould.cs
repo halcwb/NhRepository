@@ -11,7 +11,7 @@ namespace Informedica.DataAccess.Tests
         [TestMethod]
         public void BeAbleToCreateAnInMemorySqLiteSessionFactory()
         {
-            var fact = RepositoryFixture.CreateSqLiteSessionFactoryCreator();
+            var fact = RepositoryFixture.CreateSqLiteSessionFactoryCreator<TestMapping>();
 
             try
             {
@@ -23,19 +23,6 @@ namespace Informedica.DataAccess.Tests
             }
         }
 
-        [TestMethod]
-        public void BeAbleToCreateAnInMemorySqLiteFactory()
-        {
-
-            try
-            {
-                new SessionFactoryCreator<TestMapping>().CreateInMemorySqlLiteFactory();
-            }
-            catch (Exception e)
-            {
-                Assert.Fail(e.ToString());
-            }
-        }
     }
 
     public class TestMapping: EntityMap<TestEntity, int>

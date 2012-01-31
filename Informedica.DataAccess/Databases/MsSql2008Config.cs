@@ -14,5 +14,10 @@ namespace Informedica.DataAccess.Databases
         {
             throw new System.NotImplementedException();
         }
+
+        public IPersistenceConfigurer Configurer()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

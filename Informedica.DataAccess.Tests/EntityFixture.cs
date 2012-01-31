@@ -20,10 +20,12 @@ namespace Informedica.DataAccess.Tests
 
         public TestEntity(int id)
         {
+// ReSharper disable DoNotCallOverridableMethodsInConstructor
             Id = id;
+// ReSharper restore DoNotCallOverridableMethodsInConstructor
         }
 
-        public virtual string Name
+        public new virtual string Name
         {
             get { return base.Name; }
             set { base.Name = value; }

@@ -7,5 +7,6 @@ namespace Informedica.DataAccess.Databases
     {
         IPersistenceConfigurer Configurer(string connectString);
         IDbConnection GetConnection();
+        IPersistenceConfigurer Configurer();
     }
 }

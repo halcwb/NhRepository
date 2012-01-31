@@ -1,6 +1,8 @@
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Mapping;
 using Informedica.DataAccess.Databases;
 using Informedica.EntityRepository;
+using NHibernate.Context;
 
 namespace Informedica.DataAccess.Tests
 {
@@ -10,17 +12,26 @@ namespace Informedica.DataAccess.Tests
         public static IRepository<TestEntity, int> CreateInMemorySqLiteRepository<TMap>()
             where TMap: ClassMap<TestEntity>
         {
-            var fact = new SessionFactoryCreator<TMap>().CreateInMemorySqlLiteFactory();
-            return new Repositories.Repository<TestEntity, int>(fact);
+            var creator = CreateSqLiteSessionFactoryCreator<TMap>();
+            var fact = creator.CreateSessionFactory();
+            var session = fact.OpenSession();
+            creator.BuildSchema(session);
+            CurrentSessionContext.Bind(session);
+
+            return new Repositories.Repository<TestEntity, int>(creator.CreateSessionFactory());
         }
 
-        public static SessionFactoryCreator<TestMapping> CreateSqLiteSessionFactoryCreator()
+        public static SessionFactoryCreator CreateSqLiteSessionFactoryCreator<TMap>()
         {
-            var config = new SqlLiteConfig();
-            var fact = new SessionFactoryCreator<TestMapping>(config);
-            return fact;
-        }
-    }
+            var dbConfig = new SqlLiteConfig();
+            var config = Fluently.Configure()
+                .Mappings(x => x.FluentMappings.AddFromAssemblyOf<TMap>())
+                .CurrentSessionContext<ThreadStaticSessionContext>()
+                .ExposeConfiguration(x => x.SetProperty("connection.release_mode", "on_close"));
 
+            return new SessionFactoryCreator(dbConfig, config);
+        }
+
+    }
 
 }

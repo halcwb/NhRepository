@@ -4,6 +4,7 @@ using FluentNHibernate.Cfg;
 using HibernatingRhinos.Profiler.Appender.NHibernate;
 using NHibernate;
 using NHibernate.Cfg;
+using NHibernate.Context;
 using NHibernate.Tool.hbm2ddl;
 
 namespace Informedica.DataAccess.Databases
@@ -52,6 +53,18 @@ namespace Informedica.DataAccess.Databases
         public void BuildSchema(ISession session)
         {
             BuildSchema(session.Connection);
+        }
+
+        public static SessionFactoryCreator CreateInMemorySqlLiteFactoryCreator<TMap>()
+        {
+            var dbConfig = new SqlLiteConfig();
+            var config = Fluently.Configure()
+                .Mappings(x => x.FluentMappings.AddFromAssemblyOf<TMap>())
+                .CurrentSessionContext<ThreadStaticSessionContext>()
+                .ExposeConfiguration(x => x.SetProperty("connection.release_mode", "on_close"));
+
+            return new SessionFactoryCreator(dbConfig, config);
+
         }
     }
 

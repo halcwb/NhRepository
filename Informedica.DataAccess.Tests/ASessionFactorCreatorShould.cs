@@ -1,5 +1,4 @@
 ﻿using System;
-using Informedica.DataAccess.Databases;
 using Informedica.DataAccess.Mappings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

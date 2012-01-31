@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using FluentNHibernate.Cfg;
 using HibernatingRhinos.Profiler.Appender.NHibernate;
 using NHibernate;
@@ -20,7 +19,6 @@ namespace Informedica.DataAccess.Databases
         private Configuration _configuration;
         private readonly IDatabaseConfig _dbConfig;
 
-        [Obsolete]
         static SessionFactoryCreator() { NHibernateProfiler.Initialize(); } 
 
         public SessionFactoryCreator(IDatabaseConfig databaseConfig, Configuration configuration)

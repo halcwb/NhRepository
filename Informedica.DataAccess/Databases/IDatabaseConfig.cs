@@ -1,8 +1,7 @@
 using System.Data;
-using System.Data.SQLite;
 using FluentNHibernate.Cfg.Db;
 
-namespace Informedica.GenForm.DataAccess.Databases
+namespace Informedica.DataAccess.Databases
 {
     public interface IDatabaseConfig
     {

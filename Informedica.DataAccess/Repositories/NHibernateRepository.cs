@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Informedica.EntityRepository;
 using Informedica.EntityRepository.Entities;
-using Informedica.NhRepository.NHibernate;
 using NHibernate;
 using NHibernate.Linq;
 
-namespace Informedica.NhRepository.Repositories
+namespace Informedica.DataAccess.Repositories
 {
     public class NHibernateRepository<TEnt, TId> : NHibernateBase, IRepository<TEnt, TId>
         where TEnt : class, IEntity<TEnt, TId>

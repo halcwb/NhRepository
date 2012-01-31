@@ -2,13 +2,12 @@
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using HibernatingRhinos.Profiler.Appender.NHibernate;
-using Informedica.GenForm.DataAccess.Databases;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Context;
 using NHibernate.Tool.hbm2ddl;
 
-namespace Informedica.NhRepository.NHibernate
+namespace Informedica.DataAccess.Databases
 {
     public class SessionFactoryCreator<TMap>
     {

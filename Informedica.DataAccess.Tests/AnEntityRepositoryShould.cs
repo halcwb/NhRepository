@@ -1,12 +1,12 @@
 ﻿using Informedica.EntityRepository;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Informedica.NhRepository.xTests
+namespace Informedica.DataAccess.Tests
 {
     [TestClass]
     public class AnEntityRepositoryShould
     {
-        private static readonly EntityRepository.Tests.AnEntityRepositoryShould Tests = new EntityRepository.Tests.AnEntityRepositoryShould();
+        private static readonly EntityRepository.Testing.AnEntityRepositoryShould Tests = new EntityRepository.Testing.AnEntityRepositoryShould();
 
         [TestMethod]
         public void ThrowAnErrorWhenInitiatedWithAnNullReference()
@@ -16,7 +16,7 @@ namespace Informedica.NhRepository.xTests
 
         private static void CreateRepositoryWithNullReference()
         {
-            new EntityRepository.Repository<TestEntity, int>(null);
+            new Repository<TestEntity, int>(null);
         }
 
         [TestMethod]

@@ -1,4 +1,4 @@
-namespace Informedica.NhRepository.xTests
+namespace Informedica.DataAccess.Tests
 {
     static internal class EntityFixture
     {
@@ -14,7 +14,7 @@ namespace Informedica.NhRepository.xTests
 
     }
 
-    public class TestEntity: EntityRepository.Tests.TestEntity
+    public class TestEntity: EntityRepository.Testing.TestEntity
     {
         protected TestEntity() {}
 

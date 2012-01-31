@@ -1,6 +1,6 @@
 using HibernatingRhinos.Profiler.Appender.NHibernate;
 
-namespace Informedica.NhRepository.App_Start
+namespace Informedica.DataAccess.App_Start
 {
 	public static class NHibernateProfilerBootstrapper
 	{

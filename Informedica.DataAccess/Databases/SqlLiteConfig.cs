@@ -1,9 +1,8 @@
 ﻿using System.Data;
 using System.Data.SQLite;
 using FluentNHibernate.Cfg.Db;
-using Informedica.GenForm.DataAccess.Databases;
 
-namespace Informedica.NhRepository.NHibernate
+namespace Informedica.DataAccess.Databases
 {
     public class SqlLiteConfig: IDatabaseConfig
     {

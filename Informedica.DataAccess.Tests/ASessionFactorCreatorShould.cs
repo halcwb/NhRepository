@@ -1,8 +1,9 @@
 ﻿using System;
-using Informedica.NhRepository.NHibernate;
+using Informedica.DataAccess.Databases;
+using Informedica.DataAccess.Mappings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Informedica.NhRepository.xTests
+namespace Informedica.DataAccess.Tests
 {
     [TestClass]
     public class ASessionFactorCreatorShould

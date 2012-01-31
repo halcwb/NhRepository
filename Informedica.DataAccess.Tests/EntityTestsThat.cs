@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Informedica.NhRepository.xTests
+namespace Informedica.DataAccess.Tests
 {
     [TestClass]
     public class EntityTestsThat

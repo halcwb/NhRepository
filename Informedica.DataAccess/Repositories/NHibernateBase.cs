@@ -1,7 +1,7 @@
 ﻿using System;
 using NHibernate;
 
-namespace Informedica.NhRepository.NHibernate
+namespace Informedica.DataAccess.Repositories
 {
     public abstract class NHibernateBase
     {

@@ -1,8 +1,7 @@
 using System.Data;
 using FluentNHibernate.Cfg.Db;
-using Informedica.GenForm.DataAccess.Databases;
 
-namespace Informedica.NhRepository.NHibernate
+namespace Informedica.DataAccess.Databases
 {
     public class MsSql2008Config : IDatabaseConfig
     {

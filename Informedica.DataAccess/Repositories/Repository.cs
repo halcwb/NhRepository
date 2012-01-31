@@ -1,8 +1,7 @@
 ﻿using Informedica.EntityRepository.Entities;
-using Informedica.NhRepository.Repositories;
 using NHibernate;
 
-namespace Informedica.NhRepository
+namespace Informedica.DataAccess.Repositories
 {
     public class Repository<TEnt, TId>: EntityRepository.Repository<TEnt, TId> 
         where TEnt : class, IEntity<TEnt, TId>

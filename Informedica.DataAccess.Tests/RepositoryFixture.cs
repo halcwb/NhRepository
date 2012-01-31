@@ -1,8 +1,8 @@
 using FluentNHibernate.Mapping;
+using Informedica.DataAccess.Databases;
 using Informedica.EntityRepository;
-using Informedica.NhRepository.NHibernate;
 
-namespace Informedica.NhRepository.xTests
+namespace Informedica.DataAccess.Tests
 {
     static internal class RepositoryFixture
     {
@@ -11,7 +11,7 @@ namespace Informedica.NhRepository.xTests
             where TMap: ClassMap<TestEntity>
         {
             var fact = new SessionFactoryCreator<TMap>().CreateInMemorySqlLiteFactory();
-            return new Repository<TestEntity, int>(fact);
+            return new Repositories.Repository<TestEntity, int>(fact);
         }
 
         public static SessionFactoryCreator<TestMapping> CreateSqLiteSessionFactoryCreator()

@@ -1,4 +1,5 @@
 ﻿using System;
+using Informedica.DataAccess.Databases;
 using Informedica.DataAccess.Mappings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -20,6 +21,21 @@ namespace Informedica.DataAccess.Tests
             {
                 Assert.Fail(e.ToString());
             }
+        }
+
+        [TestMethod]
+        public void BeAbleToCreateASqLiteSessionFactoryWithConnectionString()
+        {
+            try
+            {
+                var fact = SessionFactoryCreator.CreatSqLiteFactory<TestMapping>("Data Source=:memory:;Version=3;New=True;Pooling=True;Max Pool Size=1;");
+                fact.CreateSessionFactory();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.ToString());
+            }
+
         }
 
     }

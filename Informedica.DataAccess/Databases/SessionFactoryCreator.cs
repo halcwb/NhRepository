@@ -56,13 +56,27 @@ namespace Informedica.DataAccess.Databases
         public static SessionFactoryCreator CreateInMemorySqlLiteFactoryCreator<TMap>()
         {
             var dbConfig = new SqlLiteConfig();
+            var config = GetFluentConfig<TMap>();
+
+            return new SessionFactoryCreator(dbConfig, config);
+
+        }
+
+        private static FluentConfiguration GetFluentConfig<TMap>()
+        {
             var config = Fluently.Configure()
                 .Mappings(x => x.FluentMappings.AddFromAssemblyOf<TMap>())
                 .CurrentSessionContext<ThreadStaticSessionContext>()
                 .ExposeConfiguration(x => x.SetProperty("connection.release_mode", "on_close"));
+            return config;
+        }
+
+        public static SessionFactoryCreator CreatSqLiteFactory<TMap>(string connectionString)
+        {
+            var dbConfig = new SqlLiteConfig(connectionString);
+            var config = GetFluentConfig<TMap>();
 
             return new SessionFactoryCreator(dbConfig, config);
-
         }
     }
 

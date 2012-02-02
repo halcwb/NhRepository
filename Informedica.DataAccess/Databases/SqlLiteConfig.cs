@@ -9,6 +9,13 @@ namespace Informedica.DataAccess.Databases
         private static SQLiteConnection _connection;
         private static string _connectionString = "Data Source=:memory:;Version=3;New=True;Pooling=True;Max Pool Size=1;";
 
+        public SqlLiteConfig() {}
+
+        public SqlLiteConfig(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+
         public IPersistenceConfigurer Configurer(string connectString)
         {
             _connectionString = connectString;

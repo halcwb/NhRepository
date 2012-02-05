@@ -1,5 +1,5 @@
 using FluentNHibernate.Mapping;
-using Informedica.DataAccess.Databases;
+using Informedica.DataAccess.Configurations;
 using Informedica.EntityRepository;
 
 namespace Informedica.DataAccess.Tests
@@ -13,9 +13,9 @@ namespace Informedica.DataAccess.Tests
             return Repositories.Repository<TestEntity, int>.CreateInMemorySqLiteRepository<TMap>();
         }
 
-        public static SessionFactoryCreator CreateSqLiteSessionFactoryCreator<TMap>()
+        public static ConfigurationManager CreateSqLiteSessionFactoryCreator<TMap>()
         {
-            return SessionFactoryCreator.CreateInMemorySqlLiteFactoryCreator<TMap>();
+            return ConfigurationManager.CreateInMemorySqlLiteFactoryCreator<TMap>();
 
         }
 

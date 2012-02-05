@@ -1,4 +1,4 @@
-﻿using Informedica.DataAccess.Databases;
+﻿using Informedica.DataAccess.Configurations;
 using Informedica.EntityRepository;
 using Informedica.EntityRepository.Entities;
 using NHibernate;
@@ -15,7 +15,7 @@ namespace Informedica.DataAccess.Repositories
 
         public static IRepository<TEnt,TId> CreateInMemorySqLiteRepository<TMap>()
         {
-            var creator = SessionFactoryCreator.CreateInMemorySqlLiteFactoryCreator<TMap>();
+            var creator = ConfigurationManager.CreateInMemorySqlLiteFactoryCreator<TMap>();
             var fact = creator.CreateSessionFactory();
             var session = fact.OpenSession();
             creator.BuildSchema(session);

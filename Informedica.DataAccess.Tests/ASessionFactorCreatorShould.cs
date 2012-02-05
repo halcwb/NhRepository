@@ -1,5 +1,5 @@
 ﻿using System;
-using Informedica.DataAccess.Databases;
+using Informedica.DataAccess.Configurations;
 using Informedica.DataAccess.Mappings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -28,7 +28,8 @@ namespace Informedica.DataAccess.Tests
         {
             try
             {
-                var fact = SessionFactoryCreator.CreatSqLiteFactory<TestMapping>("Data Source=:memory:;Version=3;New=True;Pooling=True;Max Pool Size=1;");
+                var fact = ConfigurationManager.CreatSqLiteFactory<TestMapping>("Data Source=:memory:;Version=3;New=True;Pooling=True;Max Pool Size=1;");
+                fact.BuildSchema();
                 fact.CreateSessionFactory();
             }
             catch (Exception e)

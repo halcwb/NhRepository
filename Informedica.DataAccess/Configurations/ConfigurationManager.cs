@@ -1,14 +1,11 @@
 ﻿using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Threading;
 using FluentNHibernate.Cfg;
 using Informedica.DataAccess.Databases;
-using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Context;
-using NHibernate.Tool.hbm2ddl;
 
 namespace Informedica.DataAccess.Configurations
 {
@@ -20,10 +17,7 @@ namespace Informedica.DataAccess.Configurations
     /// </summary>
     public class ConfigurationManager
     {
-        private Configuration _configuration;
-        private readonly IDatabaseConfig _dbConfig;
-
-        private static readonly IDictionary<string, IEnvironmentConfiguration> _configurations = new ConcurrentDictionary<string, IEnvironmentConfiguration>(); 
+        private static IDictionary<string, IEnvironmentConfiguration> _configurations; 
         
         private static ConfigurationManager _instance;
         private static readonly object LockThis = new object();
@@ -33,12 +27,9 @@ namespace Informedica.DataAccess.Configurations
             App_Start.NHibernateProfilerBootstrapper.PreStart();
         }
 
-        public ConfigurationManager() {}
-
-        public ConfigurationManager(IDatabaseConfig databaseConfig, FluentConfiguration fluentConfiguration)
+        public ConfigurationManager()
         {
-            _dbConfig = databaseConfig;
-            fluentConfiguration.Database(_dbConfig.Configurer()).ExposeConfiguration(cfg => _configuration = cfg).BuildConfiguration();
+            _configurations = new ConcurrentDictionary<string, IEnvironmentConfiguration>();
         }
 
         public static ConfigurationManager Instance
@@ -70,25 +61,6 @@ namespace Informedica.DataAccess.Configurations
             return _configurations.Single(c => c.Key == name).Value;
         }
 
-        private void BuildSchema(IDbConnection connection)
-        {
-            new SchemaExport(_configuration).Execute(false, true, false, connection, null);
-        }
-
-        public void BuildSchema()
-        {
-            BuildSchema(_dbConfig.GetConnection());
-        }
-
-        public ISessionFactory CreateSessionFactory()
-        {
-            return _configuration.BuildSessionFactory();
-        }
-
-        public void BuildSchema(ISession session)
-        {
-            BuildSchema(session.Connection);
-        }
 
         public void AddInMemorySqLiteEnvironment<TMap>(string name)
         {
@@ -106,14 +78,6 @@ namespace Informedica.DataAccess.Configurations
                 .CurrentSessionContext<ThreadStaticSessionContext>()
                 .ExposeConfiguration(x => x.SetProperty("connection.release_mode", "on_close"));
             return config;
-        }
-
-        public static ConfigurationManager CreatSqLiteFactory<TMap>(string connectionString)
-        {
-            var dbConfig = new SqlLiteConfig(connectionString);
-            var config = GetFluentConfig<TMap>();
-
-            return new ConfigurationManager(dbConfig, config);
         }
 
         public void AddConfiguration(string name, FluentConfiguration fluentConfig, IDatabaseConfig dbConfig)

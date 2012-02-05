@@ -28,7 +28,7 @@ namespace Informedica.DataAccess.Tests
 
         private static IRepository<TestEntity, int> GetRepository()
         {
-            return RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
+            return RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>("Test");
         }
 
         [TestMethod]

@@ -9,7 +9,7 @@ namespace Informedica.DataAccess.Tests
         [TestMethod]
         public void ThatEntityCanBeIdentifiedByAnId()
         {
-            var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
+            var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>("test");
             var ent = EntityFixture.CreateIntIdEntity();
             repos.Add(ent);
 
@@ -21,7 +21,7 @@ namespace Informedica.DataAccess.Tests
         {
             var ent = EntityFixture.CreateEntityWithId(1);
             ent.Name = "TestEntity";
-            var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>();
+            var repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>("test");
             repos.Add(ent);
 
             Assert.AreEqual(ent, repos.SingleOrDefault(e => e.IsIdentical(ent)));

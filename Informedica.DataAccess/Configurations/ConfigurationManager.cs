@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading;
@@ -19,20 +20,20 @@ namespace Informedica.DataAccess.Configurations
     /// </summary>
     public class ConfigurationManager
     {
-        private NHibernate.Cfg.Configuration _configuration;
+        private Configuration _configuration;
         private readonly IDatabaseConfig _dbConfig;
 
-        private static readonly IList<IEnvironmentConfiguration> _configurations = new List<IEnvironmentConfiguration>();
+        private static readonly IDictionary<string, IEnvironmentConfiguration> _configurations = new ConcurrentDictionary<string, IEnvironmentConfiguration>(); 
         
         private static ConfigurationManager _instance;
         private static readonly object LockThis = new object();
 
-        public ConfigurationManager()
+        static ConfigurationManager()
         {
-
+            App_Start.NHibernateProfilerBootstrapper.PreStart();
         }
 
-
+        public ConfigurationManager() {}
 
         public ConfigurationManager(IDatabaseConfig databaseConfig, FluentConfiguration fluentConfiguration)
         {
@@ -61,7 +62,12 @@ namespace Informedica.DataAccess.Configurations
 
         public IEnumerable<IEnvironmentConfiguration> Configurations
         {
-            get { return _configurations; }
+            get { return _configurations.Values; }
+        }
+
+        public IEnvironmentConfiguration GetConfiguration(string name)
+        {
+            return _configurations.Single(c => c.Key == name).Value;
         }
 
         private void BuildSchema(IDbConnection connection)
@@ -84,12 +90,12 @@ namespace Informedica.DataAccess.Configurations
             BuildSchema(session.Connection);
         }
 
-        public static ConfigurationManager CreateInMemorySqlLiteFactoryCreator<TMap>()
+        public void AddInMemorySqLiteEnvironment<TMap>(string name)
         {
             var dbConfig = new SqlLiteConfig();
             var config = GetFluentConfig<TMap>();
 
-            return new ConfigurationManager(dbConfig, config);
+            AddConfiguration(name, config, dbConfig);
 
         }
 
@@ -112,21 +118,22 @@ namespace Informedica.DataAccess.Configurations
 
         public void AddConfiguration(string name, FluentConfiguration fluentConfig, IDatabaseConfig dbConfig)
         {
-            AddConfiguration(name, fluentConfig.BuildConfiguration(), dbConfig);
+            AddConfiguration(name, fluentConfig.Database(dbConfig.Configurer()).BuildConfiguration(), dbConfig);
         }
 
         public void AddConfiguration(string name, Configuration configuration, IDatabaseConfig dbConfig)
         {
-            _configurations.Add(new EnvironmentConfiguration(name, configuration, dbConfig));
+            if (_configurations.ContainsKey(name)) return;
+            _configurations.Add(name, new EnvironmentConfiguration(name, configuration, dbConfig));
         }
 
         public void RemoveConfiguration(string name)
         {
-            var config = _configurations.Single(c => c.EnvironmentName == name);
+            var config = _configurations.Single(c => c.Key == name);
             RemoveConfiguration(config);
         }
 
-        private static void RemoveConfiguration(IEnvironmentConfiguration config)
+        private static void RemoveConfiguration(KeyValuePair<string, IEnvironmentConfiguration> config)
         {
             _configurations.Remove(config);
         }

@@ -13,15 +13,15 @@ namespace Informedica.DataAccess.Repositories
         {
         }
 
-        public static IRepository<TEnt,TId> CreateInMemorySqLiteRepository<TMap>()
+        public static IRepository<TEnt,TId> CreateInMemorySqLiteRepository<TMap>(string name)
         {
-            var creator = ConfigurationManager.CreateInMemorySqlLiteFactoryCreator<TMap>();
-            var fact = creator.CreateSessionFactory();
-            var session = fact.OpenSession();
-            creator.BuildSchema(session);
+            ConfigurationManager.Instance.AddInMemorySqLiteEnvironment<TMap>(name);
+            var envConf = ConfigurationManager.Instance.GetConfiguration(name);
+            var session = envConf.GetSessionFactory().OpenSession();
+            envConf.BuildSchema(session);
             CurrentSessionContext.Bind(session);
 
-            return new Repository<TEnt, TId>(creator.CreateSessionFactory());
+            return new Repository<TEnt, TId>(envConf.GetSessionFactory());
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Informedica.DataAccess.Configurations
 
         public void BuildSchema(IDbConnection connection)
         {
-            new SchemaExport(_configuration).Execute(true, true, true, connection, null);            
+            new SchemaExport(_configuration).Execute(true, true, false, connection, null);            
         }
 
     

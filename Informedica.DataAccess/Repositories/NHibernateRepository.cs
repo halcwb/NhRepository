@@ -40,6 +40,26 @@ namespace Informedica.DataAccess.Repositories
             get { return Transact(() => Session.Query<TEnt>().Count()); }
         }
 
+        public IEnumerable<TEnt> RunQuery(IQuery query)
+        {
+            return Transact(() => query.Enumerable<TEnt>());
+        }
+
+        public IQuery CreateQuery(string queryString)
+        {
+            return Transact(() => Session.CreateQuery(queryString));
+        }
+
+        public IEnumerable<TEnt> RunQueryOver(IQueryOver<TEnt> query)
+        {
+            return Transact(() => query.List<TEnt>());
+        }
+
+        public IQueryOver<TEnt> CreateQueryOver()
+        {
+            return Transact(() => Session.QueryOver<TEnt>());
+        }
+
         #endregion
 
         #region Add and Remove
@@ -54,7 +74,13 @@ namespace Informedica.DataAccess.Repositories
 
         public virtual bool Contains(TEnt item)
         {
-            return Transact(() => Session.Get<TEnt>(item.Id) != null);
+            return Transact(() => ContainsItem(item));
+        }
+
+        private bool ContainsItem(TEnt ent)
+        {
+            var test = this.FirstOrDefault();
+            return this.Any(item => ReferenceEquals(item, ent));
         }
 
         public virtual void Add(TEnt entity)

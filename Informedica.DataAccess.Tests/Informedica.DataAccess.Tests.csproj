@@ -98,6 +98,7 @@
     <Compile Include="AConfigurationManagerShould.cs" />
     <Compile Include="AnEnvironmentConfigurationShould.cs" />
     <Compile Include="AnNhRepositoryForSqLiteShould.cs" />
+    <Compile Include="ARepositoryThatInheritsFromRepositoryShould.cs" />
     <Compile Include="ASessionFactorCreatorShould.cs" />
     <Compile Include="EntityFixture.cs" />
     <Compile Include="EntityTestsThat.cs" />

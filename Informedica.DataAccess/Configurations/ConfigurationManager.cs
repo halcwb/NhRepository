@@ -68,7 +68,6 @@ namespace Informedica.DataAccess.Configurations
             var config = GetFluentConfig<TMap>();
 
             AddConfiguration(name, config, dbConfig);
-
         }
 
         private static FluentConfiguration GetFluentConfig<TMap>()

@@ -17,7 +17,9 @@ namespace Informedica.DataAccess.Repositories
         {
             ConfigurationManager.Instance.AddInMemorySqLiteEnvironment<TMap>(name);
             var envConf = ConfigurationManager.Instance.GetConfiguration(name);
-            var session = envConf.GetSessionFactory().OpenSession();
+
+            var conn = envConf.GetConnection();
+            var session = envConf.GetSessionFactory().OpenSession(conn);
             envConf.BuildSchema(session);
             CurrentSessionContext.Bind(session);
 

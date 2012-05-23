@@ -100,7 +100,6 @@
   <ItemGroup>
     <Compile Include="AConfigurationManagerShould.cs" />
     <Compile Include="AnEnvironmentConfigurationShould.cs" />
-    <Compile Include="AnNhRepositoryForSqLiteShould.cs" />
     <Compile Include="ARepositoryThatInheritsFromRepositoryShould.cs" />
     <Compile Include="ASessionFactorCreatorShould.cs" />
     <Compile Include="EntityFixture.cs" />
@@ -120,7 +119,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

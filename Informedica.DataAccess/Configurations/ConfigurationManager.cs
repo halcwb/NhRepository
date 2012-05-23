@@ -64,6 +64,8 @@ namespace Informedica.DataAccess.Configurations
 
         public void AddInMemorySqLiteEnvironment<TMap>(string name)
         {
+            if (_configurations.Keys.Contains(name)) return;
+            
             var dbConfig = new SqlLiteConfig();
             var config = GetFluentConfig<TMap>();
 

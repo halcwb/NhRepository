@@ -98,12 +98,13 @@
   <ItemGroup>
     <Compile Include="App_Start\NHibernateProfilerBootstrapper.cs" />
     <Compile Include="Configurations\EnvironmentConfiguration.cs" />
+    <Compile Include="Configurations\IConnectionCache.cs" />
     <Compile Include="Configurations\IEnvironmentConfiguration.cs" />
     <Compile Include="Mappings\EntityMap.cs" />
     <Compile Include="Configurations\IDatabaseConfig.cs" />
     <Compile Include="Configurations\MsSql2008Config.cs" />
     <Compile Include="Configurations\ConfigurationManager.cs" />
-    <Compile Include="Configurations\SqlLiteConfig.cs" />
+    <Compile Include="Configurations\SqLiteConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\NHibernateBase.cs" />
     <Compile Include="Repositories\NHibernateRepository.cs" />

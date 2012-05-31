@@ -5,16 +5,21 @@ using Informedica.DataAccess.Databases;
 
 namespace Informedica.DataAccess.Configurations
 {
-    public class SqlLiteConfig: IDatabaseConfig
+    public class SqLiteConfig: IDatabaseConfig
     {
-        private static SQLiteConnection _connection;
         private static string _connectionString = "Data Source=:memory:;Version=3;New=True;Pooling=True;Max Pool Size=1;";
+        private IConnectionCache _cache;
 
-        public SqlLiteConfig() {}
+        public SqLiteConfig() {}
 
-        public SqlLiteConfig(string connectionString)
+        public SqLiteConfig(string connectionString)
         {
             _connectionString = connectionString;
+        }
+
+        public SqLiteConfig(IConnectionCache cache)
+        {
+            _cache = cache;
         }
 
         public IPersistenceConfigurer Configurer(string connectString)
@@ -25,13 +30,13 @@ namespace Informedica.DataAccess.Configurations
 
         public IDbConnection GetConnection()
         {
-            if(_connection == null || _connection.State != ConnectionState.Open )
+            if(_cache.IsEmpty)
             {
-                _connection = new SQLiteConnection(_connectionString);
-                _connection.Open();
+                _cache.SetConnection(new SQLiteConnection(_connectionString));
             }
 
-            return _connection;
+            if (_cache.GetConnection().State == ConnectionState.Closed) _cache.GetConnection().Open();
+            return _cache.GetConnection();
         }
 
         public IPersistenceConfigurer Configurer()

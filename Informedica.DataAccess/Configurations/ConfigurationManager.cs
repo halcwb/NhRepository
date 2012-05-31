@@ -66,7 +66,7 @@ namespace Informedica.DataAccess.Configurations
         {
             if (_configurations.Keys.Contains(name)) return;
             
-            var dbConfig = new SqlLiteConfig();
+            var dbConfig = new SqLiteConfig();
             var config = GetFluentConfig<TMap>();
 
             AddConfiguration(name, config, dbConfig);

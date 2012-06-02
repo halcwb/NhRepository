@@ -26,4 +26,5 @@ namespace Informedica.DataAccess.Repositories
             return new Repository<TEnt, TId>(envConf.GetSessionFactory());
         }
     }
+
 }

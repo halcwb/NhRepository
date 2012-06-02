@@ -2,28 +2,45 @@
 using FluentNHibernate.Cfg.Db;
 using Informedica.DataAccess.Configurations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StructureMap;
 using TypeMock.ArrangeActAssert;
 
 namespace Informedica.DataAccess.Tests
 {
     [TestClass]
-    public class AnSqLiteConfigShould
+    public class AnSqLiteConfigShould : InMemorySqLiteTestBase
     {
         private SqLiteConfig _config;
-        private IConnectionCache _cache;
         private IDbConnection _connection;
+        private IConnectionCache _cache;
+
+
+        public override IConnectionCache Cache
+        {
+            get { return _cache; }
+        }
 
         [TestInitialize]
         public void Init()
         {
-            _connection = Isolate.Fake.Instance<IDbConnection>();
             _cache = Isolate.Fake.Instance<IConnectionCache>();
+            _connection = Isolate.Fake.Instance<IDbConnection>();
             Isolate.WhenCalled(() => _cache.SetConnection(_connection)).IgnoreCall();
             Isolate.WhenCalled(() => _cache.GetConnection()).WillReturn(_connection);
+            InitCache();
 
-            _config = new SqLiteConfig(_cache);
+            _config = new SqLiteConfig(); 
         }
 
+        [Isolated]
+        [TestMethod]
+        public void RemoveTheConnectionCacheFromObjectFactoryAfterReturningAConnection()
+        {
+            _config.GetConnection();
+            Assert.IsNull(ObjectFactory.TryGetInstance<IConnectionCache>());
+        }
+
+        [Isolated]
         [TestMethod]
         public void ReturnANhiberNatePersistenceConfigurer()
         {
@@ -34,6 +51,8 @@ namespace Informedica.DataAccess.Tests
         [TestMethod]
         public void UseAConnectionCacheToGetTheConnection()
         {
+            Isolate.WhenCalled(() => _cache.HasNoConnection).WillReturn(false);
+
             Assert.AreEqual(_connection, _config.GetConnection());
             Isolate.Verify.WasCalledWithAnyArguments(() => _cache.GetConnection());
         }
@@ -44,14 +63,16 @@ namespace Informedica.DataAccess.Tests
         {
             Isolate.CleanUp();
             _cache = Isolate.Fake.Instance<IConnectionCache>();
-            _connection = Isolate.Fake.Instance<IDbConnection>();
-            Isolate.WhenCalled(() => _cache.IsEmpty).WillReturn(true);
-            Isolate.WhenCalled(() => _cache.GetConnection()).WillReturn(_connection);
-            Isolate.WhenCalled(() => _cache.SetConnection(_connection)).IgnoreCall();
 
-            _config = new SqLiteConfig(_cache);
+            _connection = Isolate.Fake.Instance<IDbConnection>();
+            Isolate.WhenCalled(() => Cache.HasNoConnection).WillReturn(true);
+            Isolate.WhenCalled(() => Cache.GetConnection()).WillReturn(_connection);
+            Isolate.WhenCalled(() => Cache.SetConnection(_connection)).IgnoreCall();
+            InitCache();
+
+            _config = new SqLiteConfig();
             _config.GetConnection();
-            Isolate.Verify.WasCalledWithAnyArguments(() => _cache.SetConnection(_connection));
+            Isolate.Verify.WasCalledWithAnyArguments(() => Cache.SetConnection(_connection));
         }
 
         [Isolated]
@@ -73,5 +94,4 @@ namespace Informedica.DataAccess.Tests
             Isolate.Verify.WasCalledWithAnyArguments(() => _connection.Open());
         }
     }
-
 }

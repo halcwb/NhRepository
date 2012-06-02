@@ -3,26 +3,49 @@ using Informedica.DataAccess.Configurations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate;
 using NHibernate.Context;
+using StructureMap;
 using TypeMock.ArrangeActAssert;
 
 namespace Informedica.DataAccess.Tests
 {
     [TestClass]
-    public class TheFactoryMethodOfEntityRepositoryShould
+    public class TheFactoryMethodCreateInMemoryEntityRepositoryShould: InMemorySqLiteTestBase
     {
         private ConfigurationManager _confMan;
         private IEnvironmentConfiguration _envConfig;
         private ISessionFactory _factory;
         private ISession _session;
         private IDbConnection _connection;
+        private static IConnectionCache _cache;
+
+        [ClassInitialize]
+        public static void MyClassInitialize(TestContext testContext)
+        {
+            _cache = new TestConnectionCache();
+        }
+
+        public override IConnectionCache Cache
+        {
+            get { return _cache; }
+        }
+
         [TestInitialize]
         public void Init()
         {
+            InitCache();
+
             _confMan = ConfigurationManager.Instance;
-            Isolate.WhenCalled(() => _confMan.AddInMemorySqLiteEnvironment<TestMapping>("T")).CallOriginal();
+            Isolate.WhenCalled(() => _confMan.AddInMemorySqLiteEnvironment<TestMapping>("Test")).CallOriginal();
             RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>("Test");
         }
 
+        [TestCleanup]
+        public void CleanUp()
+        {
+            _cache.Clear();
+        }
+
+        [Isolated]
         [TestMethod]
         public void UseTheConfigurationManagerToCreateAnInMemorySqlEnvironment()
         {
@@ -80,6 +103,8 @@ namespace Informedica.DataAccess.Tests
 
         private void IsolateRepository()
         {
+            ObjectFactory.EjectAllInstancesOf<IConnectionCache>();
+
             _envConfig = Isolate.Fake.Instance<IEnvironmentConfiguration>();
             Isolate.WhenCalled(() => _confMan.GetConfiguration("Test")).WillReturn(_envConfig);
 

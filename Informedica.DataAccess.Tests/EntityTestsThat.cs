@@ -1,11 +1,37 @@
 ﻿using System.Linq;
+using Informedica.DataAccess.Configurations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Informedica.DataAccess.Tests
 {
     [TestClass]
-    public class EntityTestsThat
+    public class EntityTestsThat: InMemorySqLiteTestBase
     {
+        private static IConnectionCache _cache;
+
+        [ClassInitialize]
+        public static void MyClassInitialize(TestContext testContext)
+        {
+            _cache = new TestConnectionCache();
+        }
+
+        public override IConnectionCache Cache
+        {
+            get { return _cache; }
+        }
+
+        [TestInitialize]
+        public void Init()
+        {
+            InitCache();
+        }
+
+        [TestCleanup]
+        public void CleanUp()
+        {
+            _cache.Clear();
+        }
+
         [TestMethod]
         public void ThatEntityCanBeIdentifiedByAnId()
         {

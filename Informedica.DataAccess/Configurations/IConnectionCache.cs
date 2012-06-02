@@ -6,6 +6,7 @@ namespace Informedica.DataAccess.Configurations
     {
         IDbConnection GetConnection();
         void SetConnection(IDbConnection connection);
-        bool IsEmpty { get; }
+        bool HasNoConnection { get; }
+        void Clear();
     }
 }

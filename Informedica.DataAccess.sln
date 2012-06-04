@@ -1,13 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2CC1A5D2-EBA8-408E-BC98-1E68AAE3A99B}"
-	ProjectSection(SolutionItems) = preProject
-		Informedica.DataAccess.vsmdi = Informedica.DataAccess.vsmdi
-		Local.testsettings = Local.testsettings
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informedica.DataAccess", "Informedica.DataAccess\Informedica.DataAccess.csproj", "{A7844906-1F6F-4AD9-BA9A-D70E501CDC98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informedica.DataAccess.Tests", "Informedica.DataAccess.Tests\Informedica.DataAccess.Tests.csproj", "{18994E51-D6DF-41B8-BF5E-70DDC1F24173}"

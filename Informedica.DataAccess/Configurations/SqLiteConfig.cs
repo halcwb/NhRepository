@@ -8,13 +8,17 @@ namespace Informedica.DataAccess.Configurations
 {
     public class SqLiteConfig: IDatabaseConfig
     {
-        private static string _connectionString = "Data Source=:memory:;Version=3;New=True;Pooling=True;Max Pool Size=1;";
+        private string _connectionString;
+        public static string InMemoryDbConnectionString = "Data Source=:memory:;Version=3;New=True;Pooling=True;Max Pool Size=1;";
 
-        public SqLiteConfig() {}
+        public SqLiteConfig()
+        {
+            _connectionString = InMemoryDbConnectionString;
+        }
 
         public SqLiteConfig(string connectionString)
         {
-            _connectionString = connectionString;
+            _connectionString = string.IsNullOrWhiteSpace(connectionString) ? InMemoryDbConnectionString : connectionString;
         }
 
         public IPersistenceConfigurer Configurer(string connectString)
@@ -32,11 +36,18 @@ namespace Informedica.DataAccess.Configurations
 
         public IDbConnection GetConnection()
         {
+            if (!InMemoryDatabase()) return ReturnNewSqLiteConnection();
+
             var cache = TryGetCache();
             return cache == null ? ReturnNewSqLiteConnection() : ReturnConnectionFromCache(cache);
         }
 
-        private static IDbConnection ReturnConnectionFromCache(IConnectionCache cache)
+        private bool InMemoryDatabase()
+        {
+            return _connectionString.Contains(":memory");
+        }
+
+        private IDbConnection ReturnConnectionFromCache(IConnectionCache cache)
         {
             if (cache.HasNoConnection)
             {
@@ -47,7 +58,7 @@ namespace Informedica.DataAccess.Configurations
             return cache.GetConnection();
         }
 
-        private static IDbConnection ReturnNewSqLiteConnection()
+        private IDbConnection ReturnNewSqLiteConnection()
         {
             var conn = new SQLiteConnection(_connectionString);
             conn.Open();

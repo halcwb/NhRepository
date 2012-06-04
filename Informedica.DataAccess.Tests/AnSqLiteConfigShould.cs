@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Data.SQLite;
 using FluentNHibernate.Cfg.Db;
 using Informedica.DataAccess.Configurations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -49,7 +50,7 @@ namespace Informedica.DataAccess.Tests
 
         [Isolated]
         [TestMethod]
-        public void UseAConnectionCacheToGetTheConnection()
+        public void UseAConnectionCacheToGetTheConnectionIfHasConnection()
         {
             Isolate.WhenCalled(() => _cache.HasNoConnection).WillReturn(false);
 
@@ -59,20 +60,34 @@ namespace Informedica.DataAccess.Tests
 
         [Isolated]
         [TestMethod]
-        public void SetANewConnectionWhenConnectionCacheIsEmpty()
+        public void SetANewConnectionWhenConnectionCacheIsEmptyAndInMemoryDatabase()
         {
             Isolate.CleanUp();
             _cache = Isolate.Fake.Instance<IConnectionCache>();
 
             _connection = Isolate.Fake.Instance<IDbConnection>();
-            Isolate.WhenCalled(() => Cache.HasNoConnection).WillReturn(true);
-            Isolate.WhenCalled(() => Cache.GetConnection()).WillReturn(_connection);
-            Isolate.WhenCalled(() => Cache.SetConnection(_connection)).IgnoreCall();
+            Isolate.WhenCalled(() => _cache.HasNoConnection).WillReturn(true);
+            Isolate.WhenCalled(() => _cache.GetConnection()).WillReturn(_connection);
+            Isolate.WhenCalled(() => _cache.SetConnection(_connection)).IgnoreCall();
+            Isolate.WhenCalled(() => _connection.ConnectionString).WillReturn(SqLiteConfig.InMemoryDbConnectionString);
             InitCache();
 
             _config = new SqLiteConfig();
             _config.GetConnection();
-            Isolate.Verify.WasCalledWithAnyArguments(() => Cache.SetConnection(_connection));
+            Isolate.Verify.WasCalledWithAnyArguments(() => _cache.SetConnection(_connection));
+        }
+
+        [Isolated]
+        [TestMethod]
+        public void NotSetANewConnectionWhenConnectionCacheIsEmptyAndNotInMemoryDatabase()
+        {
+            InitCache();
+            var conn = Isolate.Fake.Instance<SQLiteConnection>();
+            Isolate.Swap.NextInstance<SQLiteConnection>().With(conn);
+
+            _config = new SqLiteConfig("Not an in memory connection string");
+            _config.GetConnection();
+            Isolate.Verify.WasNotCalled(() => _cache.SetConnection(_connection));
         }
 
         [Isolated]

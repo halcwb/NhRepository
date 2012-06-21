@@ -1,5 +1,4 @@
 using System.Data;
-using Informedica.DataAccess.Databases;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;

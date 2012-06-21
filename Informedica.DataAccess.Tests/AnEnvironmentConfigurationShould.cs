@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using Informedica.DataAccess.Configurations;
-using Informedica.DataAccess.Databases;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate;
 using NHibernate.Cfg;

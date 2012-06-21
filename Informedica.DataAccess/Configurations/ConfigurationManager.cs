@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using FluentNHibernate.Cfg;
-using Informedica.DataAccess.Databases;
 using NHibernate.Cfg;
 using NHibernate.Context;
 

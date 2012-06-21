@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bf4daba5-261c-44b6-858b-87e966e89f6a"
+  name="Cfg"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="feb423be-b756-4ac6-90d3-6ee7d0333cd4"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=FluentNHibernate.Cfg"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="19512aea-23c9-4daa-88f3-aca8a3c771e5"
+        name="FluentConfiguration"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a59b8c94-75a3-4426-afcc-d4579eb0d02f"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/Development/DataAccess/packages/FluentNHibernate.1.3.0.717/lib/FluentNHibernate.dll Namespace=FluentNHibernate.Cfg Type=FluentConfiguration"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2fce44d7-a48a-46f7-9fd6-717598d55d03"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="53aee1dd-2fce-45bb-a31e-da09e3525f4b">
+                <propertyInstance
+                  Id="e62ed672-c4ca-4141-8a92-d3dbf600f594"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b09bb284-fb24-4bcd-bc80-1bf75b745e0d">
+                <propertyInstance
+                  Id="22323deb-3143-4926-9b8a-195cfefde7a9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="066cd9a1-7a3e-4944-8ca7-7b1971964ce3">
+                <propertyInstance
+                  Id="b9474ea6-0ca2-4ce1-8633-d4661c9dd0aa"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="597c57f1-420e-4712-8514-75f1c23623ab">
+                <propertyInstance
+                  Id="a137fd95-a92e-49c7-8eab-8f7583f6f77a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ab4a7f7-8913-4caf-9376-3280a74bb226">
+                <propertyInstance
+                  Id="48990935-ee10-483f-bcd2-282f0dae319d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ffd97839-e493-4ff6-a213-710729c838e2"
+        LastKnownName="Db"
+        LastKnownLocation="Package_1544.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

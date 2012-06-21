@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="99c7f8b8-4b8c-40d6-8964-95480c119966"
+  name="NHibernate"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="4cbf429c-522d-4a92-a071-f1575f095161"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=NHibernate"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7259acd1-3d2f-4a9e-b54f-aa19f2550f7e"
+        LastKnownName="Cfg"
+        LastKnownLocation="Package4_1539.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="9017931e-cd8a-457c-a4c6-11ee4f948eeb"
+        name="ISession"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="2feca59f-2677-48bb-a831-36f1b23451b3"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=ISession"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="72f7613c-e45d-45c7-86c1-f8ba9220fcd5"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cd8e97aa-070c-4169-924e-9389c1c8c64e">
+                <propertyInstance
+                  Id="b95659df-fe67-4849-8a87-aaceea0b7a22"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="00c2c2c6-a731-46a8-8766-20672c607787">
+                <propertyInstance
+                  Id="a266381e-2e78-40e8-bc1c-1cb967ab13d7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ca3c4f27-4a61-4663-b133-cbd63901d13a">
+                <propertyInstance
+                  Id="66d83b38-834f-418c-ac2e-26097fe795cc"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2fe5dcea-2561-4a66-9791-a5a4c2fccd1d">
+                <propertyInstance
+                  Id="706abe7c-9528-4666-86a7-b273269b4339"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="44c7febe-06a0-42f0-88b5-406b02e87330"
+        name="ISessionFactory"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="d13d5ad0-1221-49a2-b444-ffaa7865388b"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=ISessionFactory"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="89ce8c74-e058-4168-9a7d-7801ec3623fb"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7c5e20d2-7177-4f1b-8191-fd9f843f8564">
+                <propertyInstance
+                  Id="2545228d-24c5-4124-b804-add1b9cdc4be"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5dcbba5a-2d8a-4e62-aeac-79b9a716b24d">
+                <propertyInstance
+                  Id="d86b72f9-8b8e-4af6-aff7-9dea148225e8"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ab12fc9-d4ad-4443-b7a8-d55d520dc6af">
+                <propertyInstance
+                  Id="1e196622-ec4a-41cf-9624-d974572e005c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ff5d1207-5617-4e4c-9dd3-008c9f071a60">
+                <propertyInstance
+                  Id="3fa636bd-ce67-4a56-aeda-93270f697322"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="bc689409-a9f6-4c80-b890-ded3edd19fd1"
+        name="IQuery"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="9ff23ea7-ee96-4078-9c6d-72ab997d37f3"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=IQuery"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="933d2056-84d6-4dc0-8ffd-3bc10aadab82"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0670d756-b871-4fa9-9bf4-2973ba557cbb">
+                <propertyInstance
+                  Id="1ace47b7-c90f-436c-879c-744c983b0ebc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2472f9a7-d349-4361-829a-dfeb20d88d04">
+                <propertyInstance
+                  Id="fb941712-d5ac-469b-ae5b-a4763084f4a9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7fd689e5-08a7-40e9-833b-cfa126bc88a0">
+                <propertyInstance
+                  Id="c95c3cca-f657-475e-849c-a28fb1d81b46"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d01e00d5-bf5e-4258-90a0-8b111ec1affe">
+                <propertyInstance
+                  Id="b36b90e0-6084-4c58-bc4f-e93cb7eac400"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a239fae3-1ca4-433d-a62a-c1cc0dabdf9a"
+        name="IQueryOver&lt;TEnt&gt;"
+        isAbstract="true"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="11b2a26a-13a0-4050-bef2-3b6b7f0b08a7"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="52fdb83f-26ec-4c06-83be-6379163305ed">
+                <propertyInstance
+                  Id="cb050361-5788-4aaa-809e-9b1c4b311f6b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8238858c-210c-4664-a98f-ddade5a66ce8">
+                <propertyInstance
+                  Id="3b40c8df-505e-44b3-95ab-0dcf8f54e177"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9e8f2b2b-b7ec-449c-9b3c-4b74a62b9015">
+                <propertyInstance
+                  Id="1b386fd4-0056-488e-8de1-4ed590a6c3d2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f90c005-0a38-425a-a141-b632a1191368">
+                <propertyInstance
+                  Id="6b462a8b-f147-46fb-9e3b-be255c89d00c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="ec0c3717-7668-4ad0-a288-7a5fe12fda47">
+            <redefinableTemplateSignatureMoniker
+              Id="20b90781-8482-49f3-bbf6-6c98fc2e0d52"
+              LastKnownLocation="Package3_1539.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="b3d451c3-7434-4504-b5f3-08d5aaa94d18">
+                  <actuals>
+                    <classMoniker
+                      Id="ed171691-6d86-4117-9127-2e4863108292"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1725.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="79f0de33-3530-4925-bab7-9bdb62e75568"
+                      LastKnownLocation="Package3_1539.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e14dd5a0-d019-4a47-9740-b042efacd984"
+        name="IQueryOver"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="ecd4623e-6f0d-436e-9b99-5b015f8a3ab0"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=(Name=IQueryOver GenericParameterCount=1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4fbe9cdb-0b90-4243-8ec3-43bea3c01eab"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9c5c086e-97bd-4c49-baa3-7d70f77abf73">
+                <propertyInstance
+                  Id="b52e13b1-d4be-4693-878d-e82ebf0ec190"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="22be3cf4-4825-4cd3-a26b-2e32e0b6b8aa">
+                <propertyInstance
+                  Id="ff73c393-5edd-4315-ac36-98b4bd39a381"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b2d83853-1333-49cd-8aa8-4e0451c7a30e">
+                <propertyInstance
+                  Id="66a807fe-625b-46a9-a92a-fcdf98138f77"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="38d65f32-30c4-4c44-bb3c-55de96563750">
+                <propertyInstance
+                  Id="d37bd109-9d46-43d1-bf2c-1a8f4e359d31"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="20b90781-8482-49f3-bbf6-6c98fc2e0d52"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="79f0de33-3530-4925-bab7-9bdb62e75568">
+                <referencesInternal>
+                  <reference
+                    Id="58da9a4a-ebac-4c1f-9822-7d18e3377853"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=(Name=IQueryOver GenericParameterCount=1) ParameterIdentifier=0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="8cc57dbf-c181-4d0e-a8ab-b319cf65b0fd"
+                    name="TRoot"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

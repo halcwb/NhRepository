@@ -10,8 +10,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{66FAE574-0818-459C-8C21-11D32F8B3F31}"
 	ProjectSection(SolutionItems) = preProject
 		Informedica.DataAccess.vsmdi = Informedica.DataAccess.vsmdi
+		Informedica.GenForm.DataAccessModel.eap = Informedica.GenForm.DataAccessModel.eap
 		Local.testsettings = Local.testsettings
 	EndProjectSection
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Informedica.DataAccess.Model", "Informedica.DataAccess.Model\Informedica.DataAccess.Model.modelproj", "{C4B9CA23-93D3-438B-900A-6D4A2C59DFAA}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -34,6 +37,10 @@ Global
 		{E3780309-03FF-43DC-A134-828269F2008C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3780309-03FF-43DC-A134-828269F2008C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3780309-03FF-43DC-A134-828269F2008C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B9CA23-93D3-438B-900A-6D4A2C59DFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B9CA23-93D3-438B-900A-6D4A2C59DFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B9CA23-93D3-438B-900A-6D4A2C59DFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B9CA23-93D3-438B-900A-6D4A2C59DFAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

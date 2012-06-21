@@ -1,0 +1,2142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1f788294-202c-46b7-a206-4c9a011442f6"
+  name="Repositories"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="2c46e3d2-7924-40d1-a78c-ae26697084dc"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=Informedica.DataAccess.Repositories"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="d9ea1358-e6ec-4b2a-9169-06c7742c9763"
+        name="NHibernateBase"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c4f45e85-4907-4419-acdc-41dbb2ab3601"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e04b6866-9252-4e6e-b96b-ceef8db5de50"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d1daf879-78b2-4705-8b60-dc582a1fb2ef">
+                <propertyInstance
+                  Id="0b127cf3-ef18-4913-a754-b8fd34365049"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="56318ea2-c836-4bc5-a70e-072bfb1b15a6">
+                <propertyInstance
+                  Id="e22ba5f6-4833-425b-a57d-40504b79958b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fd2f79b8-b2eb-4658-9a2c-514a2d8f4aa7">
+                <propertyInstance
+                  Id="24aaf02b-e717-441f-bf5f-34f1428231ee"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="585191dd-cddd-44f0-b1ec-77e6dc35b0e9">
+                <propertyInstance
+                  Id="6f9c5c6c-0bea-42c9-b97c-eb631908189b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d2a8a93f-9a59-43d0-9b15-4135d622f298">
+                <propertyInstance
+                  Id="130ecde2-5dc1-4726-a6e9-1c3428511724"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="03362514-7029-4806-995a-04079cb8cf7d"
+            name="Session"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c34829d8-6252-43ad-a836-6ebb58e59b75"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase Member=Session"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6ccd4bcd-26a4-471b-a37b-6f30a0d9cc92"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1fa96e96-4fed-42c2-96fc-189f87f76f4f">
+                    <propertyInstance
+                      Id="be24ea33-5445-4d5a-8152-a48a2f6e9a20"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b517fa7-b4d1-4407-bc88-8c853d5e4726">
+                    <propertyInstance
+                      Id="645e2317-d54f-4590-881a-bdbdfacc33da"
+                      name="Get"
+                      value="protected" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39a0cc5e-c83c-4597-828f-c637436c4fb6">
+                    <propertyInstance
+                      Id="094a5eb4-7e0d-44a1-a3e2-b40fd0528bff"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd253a76-c67f-4a90-8e63-e12dbcbfd92e">
+                    <propertyInstance
+                      Id="04aa4780-c0ad-404f-9c42-99b4feccf19b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ea87528-21eb-41fd-ad28-72dfa9bbf5bc">
+                    <propertyInstance
+                      Id="6f9d7887-7922-45e9-8b83-0bc91761e71e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf0244a3-e227-4170-bfe3-6a162aee7372">
+                    <propertyInstance
+                      Id="71d129f3-ae22-48dc-a069-0ec0fb9273b3"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="9017931e-cd8a-457c-a4c6-11ee4f948eeb"
+                LastKnownName="ISession"
+                LastKnownLocation="Package3_1539.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="45ed9418-c733-4abf-924a-ebc5a034cebf"
+            name="Factory"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5bebf404-ea81-414c-b0a0-1b9ae439ef9e"
+                handle="viewcode://./CodeSchema_Field?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase Member=Factory"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="81965900-b090-4282-9467-ab20013d76e9"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25310993-51a0-454d-9c6f-f5a8cdad1950">
+                    <propertyInstance
+                      Id="4ef8bf8f-6513-4c2c-b952-80f92727f28a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef883a2c-829f-4130-ba50-1bdd6acf340f">
+                    <propertyInstance
+                      Id="a8b101f7-a494-4adc-bcf1-863d2c8e54b2"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff53d971-f441-4a28-94f8-6a8bc038fde6">
+                    <propertyInstance
+                      Id="b2cd7d17-e30c-45cc-b201-c62cc5bfb1e1"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2973ce0c-9aaf-4c64-b6f0-10c63a5bd84f">
+                    <propertyInstance
+                      Id="9555bb15-d25b-48be-b486-14ff09879db8"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30b3a081-eec7-4f24-8aaa-a93237fe1e50">
+                    <propertyInstance
+                      Id="430f1b25-f058-4a07-bb8d-7697a17fc80c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="44c7febe-06a0-42f0-88b5-406b02e87330"
+                LastKnownName="ISessionFactory"
+                LastKnownLocation="Package3_1539.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="a4fc8b4e-d1b8-4634-9b83-4f0467459f0b"
+            name="NHibernateBase"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5f27b7d1-c053-4f21-a50b-6e787acf0fe5"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=ISessionFactory)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="84e849e4-43e0-4bdc-b18b-40618d3a095c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b5c4b74-e208-4a86-a3e4-c6fb25608755">
+                    <propertyInstance
+                      Id="c4d85e92-da60-4123-b52e-eef7d61fdb29"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33b1047d-84e7-45da-992f-ffe9aadaf240">
+                    <propertyInstance
+                      Id="d663cb85-d30e-4cd7-b029-d97badccab14"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="edf668e8-fadd-439a-a578-cbe48f36edd5">
+                    <propertyInstance
+                      Id="d2f36a36-f012-48e1-8eb4-a023c92a183b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c770e0d-d44f-4d07-96fd-47db7f57f75b">
+                    <propertyInstance
+                      Id="8f3bdac1-e587-4361-9461-39096503f37a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="376c4349-12da-4198-9ebb-fdabe18c6e62">
+                    <propertyInstance
+                      Id="440474cc-42da-4a6b-a3a7-e8fcf37ba397"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="62037fb4-ef08-438b-805c-eed01be92891"
+                  name="factory"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6811726c-d6f1-47e3-b5f0-7b2e36083ab4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=ISessionFactory)]) ParameterIdentifier=factory"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="44c7febe-06a0-42f0-88b5-406b02e87330"
+                      LastKnownName="ISessionFactory"
+                      LastKnownLocation="Package3_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fdd91f3f-eaba-4995-a99a-774902c04712"
+            name="Transact&lt;TResult&gt;"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f8703346-0a8b-4ade-a80e-5716fd3638ed"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase Member=(Name=Transact GenericParameterCount=1 OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=(Name=Func GenericParameterCount=1 GenericArguments=[(Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase Member=(Name=Transact GenericParameterCount=1 OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=(Name=Func GenericParameterCount=1 GenericArguments=[(Type=TResult)]))]) ParameterIdentifier=0)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fd63107f-3aee-4f68-ada8-f741fca3bb54"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32cc8126-a073-407a-9c48-d26ce6bc2290">
+                    <propertyInstance
+                      Id="28290799-c281-483c-a6f9-d0fbc3893d41"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="101f8475-78f0-4815-be79-61ff25137d8c">
+                    <propertyInstance
+                      Id="217feca3-d1db-40cf-a05b-fabf67bdf095"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e34223f2-5348-4a7a-b00a-28befb8d89e1">
+                    <propertyInstance
+                      Id="40bd7f6c-c664-44db-92c8-52b030c833c7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="301a472e-d31c-4d61-8c01-1494525404c5">
+                    <propertyInstance
+                      Id="80eb8f35-bba7-460e-8fd9-fea42d7558d4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f3f61c2-cc34-4091-8ef9-e912d2614c86">
+                    <propertyInstance
+                      Id="d16d7aaa-10a0-4ed2-9a10-7e1a042b45b0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="341e28b9-dea1-490e-97cc-ab6074a9f828"
+                  name="func"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1e33fdcc-a328-4265-ad24-6bd83d5ffccd"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase Member=(Name=Transact GenericParameterCount=1 OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=(Name=Func GenericParameterCount=1 GenericArguments=[(Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase Member=(Name=Transact GenericParameterCount=1 OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=(Name=Func GenericParameterCount=1 GenericArguments=[(Type=TResult)]))]) ParameterIdentifier=0)]))]) ParameterIdentifier=func"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5d3def34-4eab-493b-b501-0484dd85aefe"
+                      LastKnownName="Func&lt;TResult&gt;"
+                      LastKnownLocation="Package7_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="19e5d455-8963-457c-a7a3-c70f6f0e6a1d"
+            name="Transact"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="39df9c1c-0b27-4f58-b203-b38cb0091ef3"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase Member=(Name=Transact OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Action)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="51e78a55-584d-4019-9ea3-8d7e46973c53"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0bf3472a-c3b7-42f5-981a-313595fab685">
+                    <propertyInstance
+                      Id="fe66df3a-44dc-4e0b-9c94-781d361aedd5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bbe1651-7ba7-4de5-83e1-89c8e3786b45">
+                    <propertyInstance
+                      Id="ff3a96c7-1256-48ee-a7b8-b0474731ee16"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74fe8485-b4f8-450a-a07a-54cf83f7b1e7">
+                    <propertyInstance
+                      Id="58d60f91-f794-47a1-aa15-6cffe82523cd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f76e214d-3b44-4516-8cec-cc063543229a">
+                    <propertyInstance
+                      Id="7d42f69f-7fc2-4190-88b0-6539dcbaf431"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de5b7156-b6ee-43f5-8698-df076bc4af45">
+                    <propertyInstance
+                      Id="d539486b-74a5-4df9-b599-ffba18d02370"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e50f7fef-e83f-4a9c-be68-b4bc41cbc7d1"
+                  name="action"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="18933569-d29d-4ee2-804b-f2812024ecab"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=NHibernateBase Member=(Name=Transact OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Action)]) ParameterIdentifier=action"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="761402b8-178c-4e83-b196-3e621c2dc14d"
+                      LastKnownName="Action"
+                      LastKnownLocation="Package7_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d7268ea4-6d95-47fe-a7a5-6ca6f6a0c69f"
+        name="NHibernateRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f1f8fe03-2eb5-46c3-b031-503af8c591d9"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="16bb98ed-3d10-4ee5-b492-1c919431312e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c3a4fcb7-dcd3-4fc9-958e-a75ae84d40f2">
+                <propertyInstance
+                  Id="cb918c54-5179-4db6-8788-dc2135ce47a0"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f87ba04-f683-4097-981b-58ce66fc6e39">
+                <propertyInstance
+                  Id="5322ac6e-6eef-46bd-84c2-21ba41d99eb3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e9121599-7bb6-4ba0-9e33-3a6233a06541">
+                <propertyInstance
+                  Id="0361b1ea-59c3-40a5-a578-a605b9fe22e2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7f6a2ddf-1c6c-426c-8ee0-8105cb5e8904">
+                <propertyInstance
+                  Id="1d84c672-32db-4c93-8ecf-7af8018d67a4"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5a6353dc-d9b2-410c-92ae-3c5e152b69d9">
+                <propertyInstance
+                  Id="f8e90bdc-6c72-476b-8bf0-3c9b2060ccee"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="f3c70572-3bb0-47f2-a8ba-ac48106c8058">
+            <interfaceMoniker
+              Id="3ee25d3f-d5d5-44b3-b97b-133f4646ac28"
+              LastKnownName="IRepository&lt;TEnt,TId&gt;"
+              LastKnownLocation="Package_1726.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="b8de211d-61d6-4c21-95a8-cfaf6c6d72cf">
+            <interfaceMoniker
+              Id="fc2b7922-943b-49d7-9c74-f8e51226a48f"
+              LastKnownName="IRepository"
+              LastKnownLocation="Package_1726.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="c917264d-3077-49d9-9d0f-a6cb7011c08f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="d9ea1358-e6ec-4b2a-9169-06c7742c9763"
+              LastKnownName="NHibernateBase"
+              LastKnownLocation="Package_1725.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="44c8e2c4-16f3-4cda-9895-7e47bed4afb4"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="ada3deab-1faa-4774-9806-86c5c86d67ed">
+                <referencesInternal>
+                  <reference
+                    Id="f530ad58-4b51-42a6-b735-30bfef1dee6b"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) ParameterIdentifier=0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="ed171691-6d86-4117-9127-2e4863108292"
+                    name="TEnt"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="8b70d6ef-f98d-42e4-a64d-a3cb882437a3">
+                <referencesInternal>
+                  <reference
+                    Id="f8616e9c-8d86-49d8-bbec-521f7047414a"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) ParameterIdentifier=1"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="883331d8-32ce-4da8-ba0a-9794e8cd958c"
+                    name="TId"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="55e5fa53-722f-4066-adf6-c37b985addff"
+            name="Count"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d16df5d8-3dba-477b-a014-e5235f4e1410"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=Count"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="875f4261-6a29-4151-a6c2-8e8229039a7e"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7df3077-dcf9-4556-a908-a8f3d0367388">
+                    <propertyInstance
+                      Id="1d92516d-aa61-42b4-a1c2-330dcf5442c2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="992233f4-86a2-4690-9345-dbd157c32768">
+                    <propertyInstance
+                      Id="ded713b5-6ec2-4f93-8bb5-684119d55976"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d2aa3a5-a367-46ee-984d-6ccad01c110f">
+                    <propertyInstance
+                      Id="dcbe8628-958c-4a2d-a882-29c94227ff1e"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="201192e2-96ad-4f69-9691-e8baa2c8ecb9">
+                    <propertyInstance
+                      Id="d086b73c-dee6-4a77-a216-0569c5411d15"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8e4371b-2bf1-4997-9eb7-27f116e3c93b">
+                    <propertyInstance
+                      Id="6d93ae3b-8467-49cf-9336-8ad29a69389d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8e3b673-6b04-4990-bfa4-212cc379b9f1">
+                    <propertyInstance
+                      Id="9816c12e-5078-4cff-b985-5fe9b9601327"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Informedica.DataAccess.Model.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="dd9350cd-c5ff-4d26-907b-cc2108346c2f"
+            name="NHibernateRepository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7fb15f0a-b365-4d20-97f3-2ab2fc0d7838"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=ISessionFactory)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="748a888e-fefb-4c27-989b-97a4c84ea368"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80ad7691-6bd1-46d2-a761-ee0921f61e0c">
+                    <propertyInstance
+                      Id="be05664a-c741-45d3-8c63-d0666b0b4a9e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="abee6638-e76f-4e94-98e2-78199631ad10">
+                    <propertyInstance
+                      Id="12eebe6c-435e-4261-8b1f-bdb86ea9f4b7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48b17b03-6401-4594-b0c5-381a7cf394d8">
+                    <propertyInstance
+                      Id="eaacc62e-3305-4664-a6b1-87c82bb0a9f8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ecaca641-c00d-4a11-8dc8-664ed534a31f">
+                    <propertyInstance
+                      Id="5d49621e-0ada-4e54-a243-521777fa1fae"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b899534b-9216-4266-b0c4-8892c932a006">
+                    <propertyInstance
+                      Id="36b54177-9684-4194-ab53-939737830f7a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b84497fb-6af3-498f-b682-3b0869537960"
+                  name="factory"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="30ef2c08-15e9-47d8-99c6-7e7cd67a61fa"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=ISessionFactory)]) ParameterIdentifier=factory"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="44c7febe-06a0-42f0-88b5-406b02e87330"
+                      LastKnownName="ISessionFactory"
+                      LastKnownLocation="Package3_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0265a668-774e-4db8-9989-354586c65c67"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="220b64df-bfb2-42fd-9fbf-afa212a2f3e9"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Add OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="60c491c9-ac70-4211-915a-cd293e46bdb9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ea6d16d-f2d9-4d38-b1ff-f153e514f8db">
+                    <propertyInstance
+                      Id="63aeb8da-ba71-471a-9489-5bb188cf3da6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d126d0eb-98a3-4142-86e4-a22baad5373f">
+                    <propertyInstance
+                      Id="c2e37921-1bd3-4117-8b5a-1e53ce96b1d2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c56821d-53c8-42a2-9939-058333823de2">
+                    <propertyInstance
+                      Id="e299c230-5bf6-4269-8ecc-17adefad9d47"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3214b8b4-9e52-4033-9217-42577868b94e">
+                    <propertyInstance
+                      Id="e49b993c-b9b3-48c5-9bde-b8475de9ae07"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1df8b896-7547-4fa0-8d8f-72a9c0fd6a08">
+                    <propertyInstance
+                      Id="b35c3296-4a55-4b52-af1e-24b640f7642d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e61672fd-ad63-4757-a377-fed841b99343"
+                  name="entity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="93432457-893a-4e8d-a5f8-357c9dee472f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Add OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=entity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ed171691-6d86-4117-9127-2e4863108292"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1725.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4d3878fa-ff78-4e89-afd3-f90e98c24bbc"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="07ab7e7d-27a3-484e-9da3-78ec4888cb68"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Add OverloadingParameters=[(Type=TEnt),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System.Collections.Generic Type=(Name=IEqualityComparer GenericParameterCount=1 GenericArguments=[(Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) ParameterIdentifier=0)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b7ecc58e-33fd-4969-b9bf-18db95b079ae"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f249921f-65b8-4001-b7cf-8dbfd4ba6e26">
+                    <propertyInstance
+                      Id="ffd863ff-fb10-4b0d-8078-66385954ed02"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10debfc4-c2b9-4f61-95fa-0410ef00191c">
+                    <propertyInstance
+                      Id="8f197177-f346-4f6c-9fc1-a0d7dc4de9c9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a4252e4-9fcd-4b7e-bdd1-f637c5c81d46">
+                    <propertyInstance
+                      Id="2707d252-28a6-4f2b-bfc6-5118a3949645"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="198f6871-e592-4e6a-b78b-ffc74fd5dc18">
+                    <propertyInstance
+                      Id="d3492734-6afb-4301-8eb9-849efb87c081"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02e09b35-437e-4677-bae8-ddde5f686269">
+                    <propertyInstance
+                      Id="9daf3435-8ddd-45fd-aab7-cbf4e114e149"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1cd75e7d-655b-4323-80ec-e650621253b9"
+                  name="item"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7cdf1d70-9733-4a81-8a55-4ca3dc871fb1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Add OverloadingParameters=[(Type=TEnt),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System.Collections.Generic Type=(Name=IEqualityComparer GenericParameterCount=1 GenericArguments=[(Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) ParameterIdentifier=0)]))]) ParameterIdentifier=item"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ed171691-6d86-4117-9127-2e4863108292"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1725.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7b52541a-23b8-412c-81ec-dc647cf104b0"
+                  name="comparer"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="81871379-7dc7-47a8-959b-5299b134b266"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Add OverloadingParameters=[(Type=TEnt),(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System.Collections.Generic Type=(Name=IEqualityComparer GenericParameterCount=1 GenericArguments=[(Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) ParameterIdentifier=0)]))]) ParameterIdentifier=comparer"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="0d1f755b-16c7-4215-a49c-84ecaf618cd4"
+                      LastKnownName="IEqualityComparer&lt;TEnt&gt;"
+                      LastKnownLocation="Package9_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e5ebb47a-80a4-4ae7-9683-866d1360589b"
+            name="Contains"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6af100ca-d651-4d35-8c47-57763ccb2038"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Contains OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9b567b34-f5a4-490c-ac40-fe4b86a855ab"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20c7e0f8-d243-4b33-9fec-c67bff2e968b">
+                    <propertyInstance
+                      Id="0e1c7e8e-a2e5-41ca-9269-a32db9486001"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efc71d0b-fe22-4b39-977d-291dea9f1336">
+                    <propertyInstance
+                      Id="a3458bb4-6edf-40c0-9dd4-6bafab9c5dc3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a6a7b39-939e-4502-8b66-4862a808999c">
+                    <propertyInstance
+                      Id="5440ec10-e67a-4472-b4b7-8d07a1c71f3c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81f96f89-e24f-4817-a36c-4cb0288f2b02">
+                    <propertyInstance
+                      Id="945d7a58-d1e1-488b-b1f1-8b2e83459808"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb149535-cda6-493d-b8e5-fe4eb96cee70">
+                    <propertyInstance
+                      Id="03c22dd6-d88c-4631-a0c2-040c7465c463"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4adbcd3c-2ea2-4800-ade8-bcddd1f9ae74"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Informedica.DataAccess.Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="29d424d5-e4bc-4a67-b153-bc36fb9da59b"
+                  name="item"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="acb78a4d-9e9f-4d80-93a8-90de25eca9c0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Contains OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=item"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ed171691-6d86-4117-9127-2e4863108292"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1725.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6967772f-d571-44e4-a8c5-2009efbe229b"
+            name="ContainsItem"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="15fd10a7-74a9-4ec4-ab3a-d53f784a4edb"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=ContainsItem OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="790782df-4f43-4953-b31f-a60d4b5a778a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa9704c7-61a8-4c78-9507-c0d872f01a95">
+                    <propertyInstance
+                      Id="c0c969fe-4983-49ee-907e-71056e04b004"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67558288-7bb3-4bad-bda0-d022ae28ef1b">
+                    <propertyInstance
+                      Id="59e4a8a7-54e5-402d-9885-b59e8c9f0528"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05d0fea8-f7ae-4bd6-8277-2152e9ccaa78">
+                    <propertyInstance
+                      Id="11c4940e-5e59-4763-ba49-a0e3b2c5007b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39ef6321-1f0b-4823-99d6-7d45c7a6419b">
+                    <propertyInstance
+                      Id="cc863abe-8252-4362-8f7a-b9cc8029ec91"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="766e4dec-a02b-4482-98b7-696dca304733">
+                    <propertyInstance
+                      Id="535aab98-f9b7-472a-91ec-d9dbda3240d8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="41a23099-df10-4477-84f4-6a5fb4fffe6c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Informedica.DataAccess.Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="303b1abc-70dc-4a25-800a-9c85b77795bf"
+                  name="ent"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e5973b2f-b234-4aed-9376-f487eed62349"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=ContainsItem OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=ent"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ed171691-6d86-4117-9127-2e4863108292"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1725.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a000f5a4-fc9e-4194-b247-20bd76215724"
+            name="CreateQuery"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="39dce8cd-fb44-4c6f-98b8-c7b88792ee8c"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=CreateQuery OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b36dc740-ae9d-4c3b-8a27-a1062acf868d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="885f22e7-18bf-4cde-b014-5c039e70e21a">
+                    <propertyInstance
+                      Id="082d50ac-8c78-40ce-ae39-7ad55d255fdc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1119b325-64ec-43e7-8fbf-9b84cd8f821f">
+                    <propertyInstance
+                      Id="b675b266-806e-4e5a-a644-f10d1d745c35"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80e70d40-92da-4111-969d-9e6d31de474b">
+                    <propertyInstance
+                      Id="7f70d5a7-3b51-4477-b8c0-aebc9eaad822"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7385e846-9b1c-44c6-b8e2-145b1c75327a">
+                    <propertyInstance
+                      Id="dabb0797-d2db-47cc-a0b1-2c3a2a0e95fa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d518c87f-c875-4bea-8cfa-238da882f982">
+                    <propertyInstance
+                      Id="76c5a9b6-dfc8-4145-8355-b2d0d8e44c54"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9b4dafe2-3523-4639-b28a-b0503825c397"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="bc689409-a9f6-4c80-b890-ded3edd19fd1"
+                      LastKnownName="IQuery"
+                      LastKnownLocation="Package3_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2bf4c3b3-36c9-4c93-99e8-2d6436c58940"
+                  name="queryString"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="37ad9ef3-99e5-441f-bbed-41bdb92dbcbe"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=CreateQuery OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=queryString"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Informedica.DataAccess.Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cced4c22-2674-4ec2-a54c-010157b1e091"
+            name="GetById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="acc24dd3-b485-4f8a-bf46-d5b741acb721"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=GetById OverloadingParameters=[(Type=TId)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4457beeb-3047-458e-a367-09b2c07b72ed"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d602670-e0d3-4b6c-aaed-e020bc6a9325">
+                    <propertyInstance
+                      Id="c1c87452-ad9f-4409-bcf6-e70a35b886b8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4f32d8a-654b-461d-b122-0829a6b72772">
+                    <propertyInstance
+                      Id="f2a1c7fc-b9e1-4a4a-91f9-85153f6a7c4a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3cee9906-9112-40a5-a233-d05c5dc2edae">
+                    <propertyInstance
+                      Id="105b3031-a495-4069-a83c-ded20bea3937"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3a6da5e-342a-4f97-a590-bb523b3a375e">
+                    <propertyInstance
+                      Id="ee19be71-68e2-453e-9c96-31a82d55cb4f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fcb29155-cee9-4ee6-adb0-af31d76c1856">
+                    <propertyInstance
+                      Id="9367a1f5-605f-4203-a4f1-121edf5ea929"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ac538c52-086c-4ea9-9af1-4f14a12e7cc5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ed171691-6d86-4117-9127-2e4863108292"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1725.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="29dc2736-c745-459e-a400-ec200dbe2fab"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="65a7335c-6296-4fbd-8c16-ffc61bf9ce9a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=GetById OverloadingParameters=[(Type=TId)]) ParameterIdentifier=id"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="883331d8-32ce-4da8-ba0a-9794e8cd958c"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package_1725.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cf860db1-73e4-492f-be92-a912e7f0e56a"
+            name="IEnumerable.GetEnumerator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3ae305cf-d46c-4dfb-bf1d-33cc9d05cf1e"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=GetEnumerator ExplicitInterface=(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System.Collections Type=IEnumerable))"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="06c5f096-83db-44a7-a580-5f55ba829c3d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7781b4ba-5f20-450e-acd2-63301e60f897">
+                    <propertyInstance
+                      Id="6d8e5e5a-ac28-409f-b1f2-1743c619d4db"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b8f7133-6245-4d99-aec7-5d15f51169dc">
+                    <propertyInstance
+                      Id="b11d84b3-9347-4ac9-bdfb-380b3f3bc5d8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35b5e0a3-4826-4e6a-8281-54e45897ba7c">
+                    <propertyInstance
+                      Id="966a4d3b-0cb4-4244-a394-ec030c7d93d7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ae690a7-9267-4d97-9b58-71d6dd852ee4">
+                    <propertyInstance
+                      Id="20791e99-2325-485d-92b9-6e94d78d3114"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85690ea9-7a63-4000-906e-91d781df8f7d">
+                    <propertyInstance
+                      Id="7813e025-3fe8-4b54-b71b-0c502b562b98"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1af1e93a-a879-4f65-b777-d71c3e5567a4"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="0a328252-43ae-4ccd-abf2-3a537de308f6"
+                      LastKnownName="IEnumerator"
+                      LastKnownLocation="Package8_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0463972a-6177-4a59-a601-0b919aaaae51"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="444a4f78-3f8c-4647-84c3-1a200ce44df0"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="25c761f4-cbf8-4a4a-a650-a8c6f5824cfb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a106730d-3f43-4818-82f3-4c69c7c904bc">
+                    <propertyInstance
+                      Id="bff58f76-0ee6-4253-a9ff-56f8ebc1cf3d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af067f66-4c94-49bb-874f-d93694dad901">
+                    <propertyInstance
+                      Id="87039cd8-3730-4a82-a2eb-f8c0a4bde23a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7819f23f-5d8c-44f4-aabb-995745fbb94b">
+                    <propertyInstance
+                      Id="2e45b650-6b7f-443a-843f-692f6a5b9a8c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22ee49fd-c873-4b5f-a2f3-c90ae9201e7c">
+                    <propertyInstance
+                      Id="fe2ebc43-7f1b-4c19-9f04-da016ec95268"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11b69967-65ad-4841-970c-a978f98e2a70">
+                    <propertyInstance
+                      Id="810e7c9c-9f48-4393-8903-3722b192f9f6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a2e113ae-c453-45c3-b6fc-14f98edd4c58"
+                  name="item"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fb51e5fc-fef6-4a95-bcb8-703f6cc4ac6b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=item"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ed171691-6d86-4117-9127-2e4863108292"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1725.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="91295d82-b3e3-4b82-9e4d-677df61093e0"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cae8581a-0875-4582-a0ff-f68331846294"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TId)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7b136d46-2994-4008-95ca-caf06424e4d1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ffb29ec-78f2-4c14-8f4b-36f88469d7f9">
+                    <propertyInstance
+                      Id="a609fd26-1467-4039-a4cf-86c2e188037d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fc42a1f-563c-4f25-91c5-9583820843cf">
+                    <propertyInstance
+                      Id="5ad82268-04de-4914-ba60-3e9bd31ef4dd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7bde74fe-81c5-4eba-8ae4-e83186947aeb">
+                    <propertyInstance
+                      Id="a7f74d2a-5f8c-4d50-9ef3-e71129971a93"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c38ee9f-7eda-467f-8ee4-2e210006cb67">
+                    <propertyInstance
+                      Id="db604a63-e67f-47e1-bdfa-753d52b50915"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="011c8e4e-c586-4b4d-93c4-cf7c95529910">
+                    <propertyInstance
+                      Id="c85d395d-73d0-4503-a9ad-5b923f9ad0f2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1a5c330e-4c60-40f5-831a-1311c5b52f06"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d17672b1-4db2-43e0-8176-6321c69696a2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TId)]) ParameterIdentifier=id"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="883331d8-32ce-4da8-ba0a-9794e8cd958c"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package_1725.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e5f4d348-afe7-4b24-880e-ef693da1369f"
+            name="RunQuery"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6409d469-c2f8-40df-886e-c21cf1f84df4"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=RunQuery OverloadingParameters=[(Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=IQuery)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bea7d384-716d-4324-995e-b9fa2dc7289a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc8d2332-9b84-4a77-89e5-f427fd27c621">
+                    <propertyInstance
+                      Id="bac25742-94e4-4290-87d0-1d9e86a3c53c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38c4965e-4606-42ba-a5ae-b36e2912be46">
+                    <propertyInstance
+                      Id="0f2d1a8f-89cb-4658-b990-a58d4bf6343c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d7ff45c-d7d7-4861-ba7f-658975d60f69">
+                    <propertyInstance
+                      Id="ece0407c-89e8-4f3f-97b4-c90a8aabade4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6cecb154-a7a0-4a24-854d-03920de4361c">
+                    <propertyInstance
+                      Id="07656761-7e36-4616-bf09-1d7d5853cd36"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f5540f7-abf6-4d07-94b2-a3703f105ae0">
+                    <propertyInstance
+                      Id="6e4d8f92-65b2-4ebe-81da-e6c9a1f430d3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4a0b8e54-2dba-4563-ae1e-fa16f73ded1d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="6c14ebc4-3692-4d09-91e5-d108ed984d91"
+                      LastKnownName="IEnumerable&lt;TEnt&gt;"
+                      LastKnownLocation="Package9_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="463cc4dd-fb09-4b65-8898-7568c293236d"
+                  name="query"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="795cf801-7568-4971-9ea1-31ba11b560f2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=RunQuery OverloadingParameters=[(Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=IQuery)]) ParameterIdentifier=query"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="bc689409-a9f6-4c80-b890-ded3edd19fd1"
+                      LastKnownName="IQuery"
+                      LastKnownLocation="Package3_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="afb25048-1045-485b-98e7-5c8c76844964"
+            name="RunQueryOver"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4adb3af3-47bc-4972-ae63-a2a8d3f2b194"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=RunQueryOver OverloadingParameters=[(Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=(Name=IQueryOver GenericParameterCount=1 GenericArguments=[(Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) ParameterIdentifier=0)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6be5e508-d8e9-46e2-a81b-512cd0ec63a4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34950d3b-9e7a-4d17-956a-9f00efcb6fd0">
+                    <propertyInstance
+                      Id="9a6da42c-3af4-47e4-96d0-56390942a9a1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54980a7e-f6a7-48b9-aa28-3c9c5ae0c37c">
+                    <propertyInstance
+                      Id="f1a2a813-e14e-48ec-92c5-c8215757a9d7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="26efea90-292a-47b9-94a6-d355712f1529">
+                    <propertyInstance
+                      Id="df3ec6a9-0a8d-45f4-b4d9-47364176c655"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52dcc90e-b9ed-41d3-a488-bf1e73c95d54">
+                    <propertyInstance
+                      Id="8da50ebe-3a2b-46b0-babf-3eeec4270108"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62898d1f-501a-47f0-802a-d33947de59e4">
+                    <propertyInstance
+                      Id="197733ab-e1b1-4439-88d2-309d487091fe"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="323026e7-595d-4ffa-93d4-f8289f124851"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="6c14ebc4-3692-4d09-91e5-d108ed984d91"
+                      LastKnownName="IEnumerable&lt;TEnt&gt;"
+                      LastKnownLocation="Package9_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0a8cb253-9d6b-4dac-8b27-ef9d7a33e4d6"
+                  name="query"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f7e4542d-2907-45b6-ba8e-379d9c8764df"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=(Name=RunQueryOver OverloadingParameters=[(Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=(Name=IQueryOver GenericParameterCount=1 GenericArguments=[(Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) ParameterIdentifier=0)]))]) ParameterIdentifier=query"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="a239fae3-1ca4-433d-a62a-c1cc0dabdf9a"
+                      LastKnownName="IQueryOver&lt;TEnt&gt;"
+                      LastKnownLocation="Package3_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="49e6951a-5cd4-41b6-a154-8108cfd724b9"
+            name="CreateQueryOver"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="923fb4dc-5bf2-43aa-bf2c-9a118665e1c8"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=CreateQueryOver"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1ee47d3f-f216-450f-b8db-753d910f802d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed9bc8cc-cc87-4e52-8b34-a66c07eb8821">
+                    <propertyInstance
+                      Id="d0256a74-b5f9-4821-84eb-871ad43eddcc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b23b58d6-87d3-400b-91cf-e34aaeb7e84f">
+                    <propertyInstance
+                      Id="ce45753a-89e0-4e35-a2f8-a38eca65d5e0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46541053-b38f-47ed-8342-e3f56d88256d">
+                    <propertyInstance
+                      Id="4bab1978-92a6-4943-9d32-4fdbdac2311b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6cc29a3c-2255-4764-8c27-d00cc0273114">
+                    <propertyInstance
+                      Id="0d9d1af7-cdce-43b1-a055-9023e9d24ef2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1348f81c-d750-4996-9490-e74258612a67">
+                    <propertyInstance
+                      Id="2fbec01c-eafa-4437-bf40-ba97a7bd528b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a6fd1f69-45ab-4afe-b3e8-5084c0ca1c76"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="a239fae3-1ca4-433d-a62a-c1cc0dabdf9a"
+                      LastKnownName="IQueryOver&lt;TEnt&gt;"
+                      LastKnownLocation="Package3_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0a44e593-8028-4bbc-aff9-8d1a9b5d45a7"
+            name="GetEnumerator"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1f2e0273-eeec-46bc-9dc8-87f844744ece"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=NHibernateRepository GenericParameterCount=2) Member=GetEnumerator"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d174fce3-a09d-4f39-a70c-d36ba3ce9cbc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3e445dc-de51-4203-81f3-cfff7d32d6dd">
+                    <propertyInstance
+                      Id="967417e6-5ec2-4f95-a30b-8970a368500f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec1d7725-1521-48b1-9e29-fa679bd7acfa">
+                    <propertyInstance
+                      Id="7001fb2e-3952-4f2c-867e-d3fb3b258604"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2551c51-d62b-4c6d-bb00-cd698dacf686">
+                    <propertyInstance
+                      Id="cf0fec93-a04f-42e4-8379-63fedfe79d4c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="deb5cb31-9ee9-4cf8-89fc-0837863055b7">
+                    <propertyInstance
+                      Id="d6b5bb7b-13ce-41ad-a680-e5b277c5c408"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10d13fab-86b1-40cb-b1c3-6bd2851637a3">
+                    <propertyInstance
+                      Id="dfaeb298-c79a-4942-a221-29d80f1e9488"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6f62ab39-9862-416c-a99c-9f9028285d28"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="d9ea20e2-c299-4dda-9639-26dfd704f9d8"
+                      LastKnownName="IEnumerator&lt;TEnt&gt;"
+                      LastKnownLocation="Package9_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="34e8a581-76ef-4f04-b34b-7650eac0e2ff"
+        name="Repository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="31f682fe-6ca0-499f-ae01-4982a463eb61"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=Repository GenericParameterCount=2)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="199dbfd2-ac70-41f1-abfa-922892794e3d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="69e1c188-50c9-4c1b-9db2-e9863954140a">
+                <propertyInstance
+                  Id="a46d5508-c39a-447b-84cd-743328b1e980"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2b729d02-4d1e-49d5-9a59-955f3a238569">
+                <propertyInstance
+                  Id="bfaee9f3-6bc7-4102-9981-0f6111a0b138"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c63299f6-db79-4d52-b9ab-376aac7a07b6">
+                <propertyInstance
+                  Id="9ad85992-0945-47c2-9c6a-ac9588b7d7fe"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="81d6f078-5576-4177-878c-0232b5e7d298">
+                <propertyInstance
+                  Id="6942eec8-8a5c-483d-ba0f-4a43a50e6f6a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1e2b0f3d-1501-4e8e-b3d6-7d39440e0885">
+                <propertyInstance
+                  Id="0eafe734-8441-4553-9378-09dacade17e2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="2e19d109-fe14-47eb-b676-d5184944fa27">
+            <classMoniker
+              Id="d7268ea4-6d95-47fe-a7a5-6ca6f6a0c69f"
+              LastKnownName="NHibernateRepository"
+              LastKnownLocation="Package_1725.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="7c00d009-ed65-448d-953c-fd24ad63a57b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b7984704-f346-4491-a453-946092a60f51"
+              LastKnownName="Repository&lt;TEnt,TId&gt;"
+              LastKnownLocation="Package_1726.uml" />
+          </generalization>
+          <generalization
+            Id="209a1d6d-b28d-441e-978d-65f46978dc0f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="0dcb3363-4b9b-4ac2-8271-090c1fb44bed"
+              LastKnownName="Repository"
+              LastKnownLocation="Package_1726.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="a55f1935-b221-4fde-89ee-06ac2f10c445"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="fc5a4590-40aa-4fda-9595-0efa1041e189">
+                <referencesInternal>
+                  <reference
+                    Id="1e144991-91e3-45b4-9fa1-7ae25f405b83"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=Repository GenericParameterCount=2) ParameterIdentifier=0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="8735c3f0-a45b-4fb9-8fb7-b285c48f89c0"
+                    name="TEnt"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="c8cb8bd5-e9ff-4f20-a999-93ed53e81d7d">
+                <referencesInternal>
+                  <reference
+                    Id="eb4c3ce5-749f-47bc-aa30-5c9a85da71d3"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=Repository GenericParameterCount=2) ParameterIdentifier=1"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="7a3dc796-7b4c-48ba-8b15-d8af429ab6ba"
+                    name="TId"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2461f9d0-79ba-4e17-a8e4-cafe21ffbe52"
+            name="Repository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4dda7994-a35a-4fca-9a8c-5de5ac9ff10d"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=Repository GenericParameterCount=2) Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=ISessionFactory)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="888c7e73-dff0-4389-9cde-30148e9f3a6b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b8eef48-cd87-43f2-bfd6-977ba8df9ecd">
+                    <propertyInstance
+                      Id="de9fde0f-faaf-4534-9081-2bcb4f405d07"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27faef95-4bb0-45de-b8b1-ab0f1175f109">
+                    <propertyInstance
+                      Id="3701972b-bd13-4185-8040-62a796cea799"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2bb68a36-51ac-493b-bbfd-ca7cc4c325f3">
+                    <propertyInstance
+                      Id="d3cbb0bf-9e99-4a86-b840-643f40d8790f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9978d49d-2d86-4468-8b31-cccd2cb2197d">
+                    <propertyInstance
+                      Id="77d79dc0-73d9-4597-981d-543b142ac08e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1dbb0521-9ff1-4c1b-883c-06d1c7b05c7b">
+                    <propertyInstance
+                      Id="20a58880-1f4e-4f89-b105-4ebfa65c96db"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="762ff7e5-6332-44da-8f85-91b67c2bfe51"
+                  name="factory"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f9a0fc79-ae9f-4b7e-8032-2ad48b463226"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=Repository GenericParameterCount=2) Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Development/DataAccess/packages/NHibernate.3.2.0.4000/lib/Net35/NHibernate.dll Namespace=NHibernate Type=ISessionFactory)]) ParameterIdentifier=factory"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="44c7febe-06a0-42f0-88b5-406b02e87330"
+                      LastKnownName="ISessionFactory"
+                      LastKnownLocation="Package3_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="81e50c0f-34e0-4f79-b18f-e149fe1b04be"
+            name="CreateInMemorySqLiteRepository&lt;TMap&gt;"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="66e6f311-347f-4f96-8cd7-79e9d9cd46a1"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=Repository GenericParameterCount=2) Member=(Name=CreateInMemorySqLiteRepository GenericParameterCount=1 OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fc74a9dc-5c66-4ed1-80d9-505066ee510c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="15af57dc-6f33-4634-b65a-d4f9935dc921">
+                    <propertyInstance
+                      Id="c832b01a-ec89-45e6-b47b-8baaf3ff6d8a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd8951aa-6c11-48fc-8937-f2b3ba7a03e4">
+                    <propertyInstance
+                      Id="e2aa6741-ba4a-4f58-b2d6-3aebf3e85500"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af5df401-37f4-4ad1-8c58-52af7c714cff">
+                    <propertyInstance
+                      Id="cdb430bf-00c0-45f4-aeda-d14b22e9c7b4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bdf1f66-7af3-4f59-85f6-0f56f89831e4">
+                    <propertyInstance
+                      Id="d0fbe124-fa50-49a8-ae66-b1d156e3a9a3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d342ea43-5b37-486e-a5b0-e11524475e87">
+                    <propertyInstance
+                      Id="456fa747-ebe9-46cf-be47-c52a8bfb917d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f20396c1-85e0-4424-a8f1-1cbd1bdea886"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="3ee25d3f-d5d5-44b3-b97b-133f4646ac28"
+                      LastKnownName="IRepository&lt;TEnt,TId&gt;"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fe10c8ce-d65b-4013-aa4f-80f319e60b7b"
+                  name="name"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9dd54d36-8c69-4269-ad2f-be1080e6e1b3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/DataAccess/Informedica.DataAccess/bin/Debug/Informedica.DataAccess.dll Namespace=Informedica.DataAccess.Repositories Type=(Name=Repository GenericParameterCount=2) Member=(Name=CreateInMemorySqLiteRepository GenericParameterCount=1 OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=name"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Informedica.DataAccess.Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

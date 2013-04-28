@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TestSettings name="Local" id="f834f89c-424e-4afd-bb6c-95375d5580cd" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<TestSettings name="Local" id="ab0f80dc-27c4-4c81-a030-4d95285027a8" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Description>These are default test settings for a local test run.</Description>
   <Deployment enabled="false" />
   <Execution hostProcessPlatform="MSIL">

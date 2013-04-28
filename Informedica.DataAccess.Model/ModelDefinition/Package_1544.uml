@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="ffd97839-e493-4ff6-a213-710729c838e2"
+  name="Db"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="76b8a91d-0702-42f8-a446-0a7e5250f5a0"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=FluentNHibernate.Cfg.Db"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="90ec1f45-55a8-423c-8b29-53e5c32181e4"
+        name="IPersistenceConfigurer"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="6e733f78-5c27-4bb5-9574-ead08833b954"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///C:/Development/DataAccess/packages/FluentNHibernate.1.3.0.717/lib/FluentNHibernate.dll Namespace=FluentNHibernate.Cfg.Db Type=IPersistenceConfigurer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="eaa12565-47fb-4a8f-bd4f-d1c62bbdec51"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4692cf23-a9e0-486f-83f9-1578edc8ef64">
+                <propertyInstance
+                  Id="c5cf731d-8797-482b-8a23-2f579419e538"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fd97f82d-2d60-44ac-b37f-215ce4ff8b39">
+                <propertyInstance
+                  Id="a406453e-8777-49d0-95ef-7b2255b36799"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2e4549cd-c030-480e-806e-0f5431b06f97">
+                <propertyInstance
+                  Id="605039ba-20aa-42d5-a901-8ac351edf6f4"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fbc07b3c-a9a3-476a-9363-4f8dcfb9954e">
+                <propertyInstance
+                  Id="4740144f-0d32-4b6b-b73d-2d620d0385d6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

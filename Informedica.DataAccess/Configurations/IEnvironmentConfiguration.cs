@@ -10,5 +10,6 @@ namespace Informedica.DataAccess.Configurations
         void BuildSchema();
         void BuildSchema(ISession session);
         void BuildSchema(IDbConnection connection);
+        IDbConnection GetConnection();
     }
 }

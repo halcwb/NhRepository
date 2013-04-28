@@ -1,7 +1,5 @@
 ﻿using System.Linq;
-using System.Threading;
 using Informedica.DataAccess.Configurations;
-using Informedica.DataAccess.Databases;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate.Cfg;
 using TypeMock.ArrangeActAssert;

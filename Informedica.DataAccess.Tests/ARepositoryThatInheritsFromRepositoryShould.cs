@@ -2,9 +2,7 @@
 using System.Linq;
 using FluentNHibernate.Mapping;
 using Informedica.DataAccess.Configurations;
-using Informedica.DataAccess.Mappings;
 using Informedica.DataAccess.Repositories;
-using Informedica.EntityRepository.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate;
 using NHibernate.Context;
@@ -12,15 +10,41 @@ using NHibernate.Context;
 namespace Informedica.DataAccess.Tests
 {
     [TestClass]
-    public class ARepositoryThatInheritsFromRepositoryShould
+    public class ARepositoryThatInheritsFromRepositoryShould : InMemorySqLiteTestBase
     {
+        private static IConnectionCache _cache;
+
+        [ClassInitialize]
+        public static void ClassInitialize(TestContext testContext)
+        {
+            _cache = new TestConnectionCache();
+        }
+
+        [TestCleanup]
+        public void Cleanup()
+        {
+            _cache.Clear();
+        }
+
+        [TestInitialize]
+        public void Init()
+        {
+            InitCache();
+        }
+
+        public override IConnectionCache Cache
+        {
+            get { return _cache; }
+        }
+
         [TestMethod]
         public void ReturnTrueWhenContainsEntity()
         {
             var ent = new InheritedEntity();
             ConfigurationManager.Instance.AddInMemorySqLiteEnvironment<InheritedEntityMap>("Test");
+            var conn = ConfigurationManager.Instance.GetConfiguration("Test").GetConnection();
             var fact = ConfigurationManager.Instance.GetConfiguration("Test").GetSessionFactory();
-            var session = fact.OpenSession();
+            var session = fact.OpenSession(conn);
             ConfigurationManager.Instance.GetConfiguration("Test").BuildSchema(session);
             CurrentSessionContext.Bind(session);
 
@@ -35,7 +59,9 @@ namespace Informedica.DataAccess.Tests
     {
         public InheritedEntityMap()
         {
+// ReSharper disable DoNotCallOverridableMethodsInConstructor
             Id(x => x.Id).GeneratedBy.GuidComb();
+// ReSharper restore DoNotCallOverridableMethodsInConstructor
             Map(x => x.Name);
         }
     }

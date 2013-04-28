@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="49ea8ae0-9c1e-45a8-8e09-b1d7079a4fdf"
+  name="DataAccess"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c35dc5df-7b35-41a9-a586-47c50022898d"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=Informedica.DataAccess"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="87f17a9f-a383-4e70-bd35-b3773b1c215f"
+        LastKnownName="Configurations"
+        LastKnownLocation="Package2_1539.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1f788294-202c-46b7-a206-4c9a011442f6"
+        LastKnownName="Repositories"
+        LastKnownLocation="Package_1725.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

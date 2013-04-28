@@ -1,0 +1,1851 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bdf810f8-355b-4ae7-95d3-ce6e0d01e861"
+  name="EntityRepository"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="6791b5e9-df8b-417e-bd0a-4e512e4b92bd"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=Informedica.EntityRepository"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="3ee25d3f-d5d5-44b3-b97b-133f4646ac28"
+        name="IRepository&lt;TEnt,TId&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ec1536a5-12db-4d99-99f1-bcfbab7c3ab9"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9bcb556b-6050-4fed-81ba-3dbb57bf3543">
+                <propertyInstance
+                  Id="71fe9970-e538-40f8-a2aa-e552ef3fd3b0"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1ec24256-5280-4161-b3ac-37b67bb168f6">
+                <propertyInstance
+                  Id="e59ff157-706c-4849-af96-66bbac5534f8"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fc93b4dc-01e7-4de6-8723-2153a718a545">
+                <propertyInstance
+                  Id="6bcb46e1-b3f0-4825-8907-2748b39889b8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1457858a-e7b4-4eda-a8e0-55e9ce7bc0cc">
+                <propertyInstance
+                  Id="91473def-cc1e-4a9f-b21a-a019b921acb4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="5e9ae69a-ec96-4e92-a7d4-1320cfdb362d">
+            <redefinableTemplateSignatureMoniker
+              Id="875c380d-8012-4c63-a55f-9488eddadca6"
+              LastKnownLocation="Package_1726.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="c98850dd-5e57-4679-b2f7-beb3b692a48e">
+                  <actuals>
+                    <classMoniker
+                      Id="9e1a2800-625f-4e68-99d5-cda677467c6d"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1726.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="30086c4b-b9fa-40cc-a7dd-c82194112eea"
+                      LastKnownLocation="Package_1726.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="a8a06d55-5eaa-43ed-a9ce-28fca7a32532">
+                  <actuals>
+                    <classMoniker
+                      Id="0687b0dd-85a5-4e60-90f7-1cc708762db7"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package_1726.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="16010af1-666c-4c34-a67c-d9f857f15b96"
+                      LastKnownLocation="Package_1726.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+        <generalsInternal>
+          <generalization
+            Id="bb9e5928-1531-4ae3-918f-9152ecedecbd"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="6c14ebc4-3692-4d09-91e5-d108ed984d91"
+              LastKnownName="IEnumerable&lt;TEnt&gt;"
+              LastKnownLocation="Package9_1539.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="fc2b7922-943b-49d7-9c74-f8e51226a48f"
+        name="IRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="9a81507b-c452-4c71-bf22-d3fdd12c8c16"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5d4f9f80-5256-4984-8f08-874eb17277be"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f18f10a-56b4-454f-910b-50ef7ba1af38">
+                <propertyInstance
+                  Id="13eebe1e-8f6a-489e-a735-257df822d512"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="18bd0db7-7e2f-40b0-8e04-f8be7dfa40a2">
+                <propertyInstance
+                  Id="12048c9d-47e2-4fef-aa09-dc26f51c54b1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e63fff2f-bed7-4bd5-b59c-99360d9f735c">
+                <propertyInstance
+                  Id="96351269-7649-4432-9a08-03875dd414e9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="28c7ada4-e5f1-435f-82df-9a755d1546e6">
+                <propertyInstance
+                  Id="ba77fa3b-079d-4975-84ab-886661fbf9e8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="5909fbca-6407-41f3-b44f-42a2f6d17ade"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="6c14ebc4-3692-4d09-91e5-d108ed984d91"
+              LastKnownName="IEnumerable&lt;TEnt&gt;"
+              LastKnownLocation="Package9_1539.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="875c380d-8012-4c63-a55f-9488eddadca6"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="30086c4b-b9fa-40cc-a7dd-c82194112eea">
+                <referencesInternal>
+                  <reference
+                    Id="a617aaa7-e017-44e5-bde1-a957e76c74fc"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) ParameterIdentifier=0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="a9fb7edb-05cf-4b50-8f12-44ed32a5011c"
+                    name="TEnt"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="16010af1-666c-4c34-a67c-d9f857f15b96">
+                <referencesInternal>
+                  <reference
+                    Id="81df19f5-0d6e-4f73-915b-9d91fd8ee2bd"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) ParameterIdentifier=1"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="37a6a570-d900-4884-8e37-7e024aa2895f"
+                    name="TId"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributes>
+          <property
+            Id="212adc04-438c-4e7a-a633-0b47e844fc3d"
+            name="Count"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="35199bc9-ce17-4bb0-b5be-ef891d52faf0"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=Count"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="93596a4c-4cb8-4624-bbef-f4f6b6c37e37"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f261f657-ef3c-4a4c-9dbf-a556994c693d">
+                    <propertyInstance
+                      Id="5e1194d3-dd9a-43d0-8e73-ed2333fcd58e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6171e5d1-da86-4aac-b014-4b0f453df869">
+                    <propertyInstance
+                      Id="b5b24859-b65f-492b-84d9-bd821510022b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d77bcda-31ea-4665-a4f5-6c5388f5c801">
+                    <propertyInstance
+                      Id="995df0f7-c631-4af4-8433-aaf014941656"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8bd60ffd-40de-4b88-9c3b-7bc887f2408e">
+                    <propertyInstance
+                      Id="acc6f2e9-f50d-447f-a243-8ac837456e39"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b72ebc41-a250-4c67-8637-bbb1e04d6477">
+                    <propertyInstance
+                      Id="6a5e76f5-72db-4be6-b850-ddb29aaddc66"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4eb2cbaf-2dda-429b-9671-832a4840cd19">
+                    <propertyInstance
+                      Id="d71bdf6d-f6ef-42a0-a5d3-3579a4a9608e"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Informedica.DataAccess.Model.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="55d4e379-9145-4cef-b0ff-d18fb352187f"
+            name="GetById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bfd88a5a-56b6-40c7-9086-ac0927ee6fec"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=(Name=GetById OverloadingParameters=[(Type=TId)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="945dec5f-9677-4084-9beb-d4de6110c10f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bfc18898-f68a-4002-b3c0-329ad81a6f6e">
+                    <propertyInstance
+                      Id="011a98cb-644a-4750-bed4-0d84647b0f1e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6eab78f0-7c0e-4337-8fe0-fbf365b67cf0">
+                    <propertyInstance
+                      Id="4105ac23-dce7-4b23-8415-435092d35fd5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5726af3-1160-4b5d-82bc-6b4783b353bb">
+                    <propertyInstance
+                      Id="6951e1ce-abd4-4a12-9f57-99e1f5f8871e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd4cf3e9-8010-42b8-b8f9-219d9a7e90cb">
+                    <propertyInstance
+                      Id="7ae72022-5148-490c-a6fb-c2f72f3140dc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aed6605c-ef61-4572-8117-be522c54ed72">
+                    <propertyInstance
+                      Id="66a9765c-aabe-44cf-995a-ef56464ea4d4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="88299820-a696-4a15-9e18-1a9865083b82"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a9fb7edb-05cf-4b50-8f12-44ed32a5011c"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0d57bb9c-e3b8-4e09-ac9e-83584f8f4b7a"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3e481bfd-779e-495c-a3a6-6b9ad4e446b6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=(Name=GetById OverloadingParameters=[(Type=TId)]) ParameterIdentifier=id"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="37a6a570-d900-4884-8e37-7e024aa2895f"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2c79290d-a29c-44c7-9d93-69fd3cb7138f"
+            name="Contains"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7507d9eb-9d5c-4f12-8e5a-0e76b43a4c57"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=(Name=Contains OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e8cf3329-6146-49d7-92d9-f0939ee31eb1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67eab273-4a22-42a5-9d52-38e93af8fd28">
+                    <propertyInstance
+                      Id="b55dd013-6486-4c86-b8db-fe2a8698aa81"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e79b333-b673-4d49-a7a7-f157305360d0">
+                    <propertyInstance
+                      Id="08bf28a6-4175-4389-bdce-64550f3a6e8b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75ce5a94-14b3-443c-98cb-f8d495a5d6eb">
+                    <propertyInstance
+                      Id="8bd3f974-4bc2-44c6-ac25-c7dd7bc91e3c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2dddf77-03b4-41dd-ad0e-cdcfa8bd3b16">
+                    <propertyInstance
+                      Id="74357142-7f6a-4351-8530-d3afe212c219"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3685274-ea49-45b7-bf81-428e806c7249">
+                    <propertyInstance
+                      Id="c61d5e17-5640-4bd7-aed1-1abe61158af4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d83485c3-633c-48b0-8383-cb8c2fa3f7ff"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Informedica.DataAccess.Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="98f5433a-ea3c-4f73-9b1f-96ea80e68aa3"
+                  name="entity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="284bc28d-7647-4a19-ad2b-af9b8dbfa7de"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=(Name=Contains OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=entity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a9fb7edb-05cf-4b50-8f12-44ed32a5011c"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="159ab721-84b5-4c55-a0a8-653d3526b8c7"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9e585572-127c-49e3-b291-c930bdae681b"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=(Name=Add OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5938ab90-ad26-4ced-b1b2-b1fd1d7cd7cc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0738040-6a66-480c-9e01-c92ea8aa8769">
+                    <propertyInstance
+                      Id="901f214b-2b0d-4655-91aa-e70bf507e278"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04568b6e-bf95-4750-807c-139db252f58e">
+                    <propertyInstance
+                      Id="ef5354ca-a7f0-48b4-a5ab-d275a4e9c18a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd7d7dcc-bea4-49a7-b99a-0933d3b5fb30">
+                    <propertyInstance
+                      Id="75d744d0-4fa4-4ccf-bb38-63a992f33212"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b13182fe-0f3f-4aa5-96eb-ffca6e3b346a">
+                    <propertyInstance
+                      Id="04f4fb62-b75f-4ebc-b70d-3a669dd037b2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea816815-ee9c-4753-ab74-cb8e828a4bec">
+                    <propertyInstance
+                      Id="498610bb-783a-4f63-9637-7320978ef8c0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0a96a095-3afc-43ed-b75b-d65613ce0fcc"
+                  name="entity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7ce1988e-ac25-4f98-a8b4-9d1ed509f676"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=(Name=Add OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=entity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a9fb7edb-05cf-4b50-8f12-44ed32a5011c"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="be6c1e05-72b2-4f7f-96d6-8e0f2ce03088"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d3a20d80-f6a9-4c92-84ef-150eae6bc5e1"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fe58b090-31c1-4f89-b654-1e819c2bf844"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a94f4e0-8815-4e48-ac6b-117beb4f1c20">
+                    <propertyInstance
+                      Id="66d367bb-db32-4e31-a7fa-9926c1b59e0e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44808146-168e-4517-a57d-e518e697e3af">
+                    <propertyInstance
+                      Id="fb710db1-3182-452f-9a0a-8ea471086613"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ce01b73-51f6-41ac-996d-da8c52bfc476">
+                    <propertyInstance
+                      Id="1f8312cb-d8a1-47ef-881d-b841cd53418a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1fd9828e-d912-4ff7-b492-25aafd50af81">
+                    <propertyInstance
+                      Id="360fc935-a10a-4763-9564-89eb955f748c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="806f7f26-1890-4087-a3b4-4aa20da09592">
+                    <propertyInstance
+                      Id="44db5d91-7cce-4257-ae64-6bbf97990df5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3b43695f-2bce-4ca2-9fc0-0290e9cca14b"
+                  name="entity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ee6def99-3a87-45f1-bbac-37b14193918b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=entity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a9fb7edb-05cf-4b50-8f12-44ed32a5011c"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="288dc4ca-835b-48e2-bc5c-19c5266f2790"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4bb01805-c5c7-4818-9925-82269c1175eb"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TId)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fc1163f0-fd75-4af7-a46b-531d90e7883d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d8ad403-182a-4559-b626-37a5672d08fb">
+                    <propertyInstance
+                      Id="c99b9bdc-dbdb-4262-a461-d7880bed0009"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe59f3fe-7603-4905-b3ab-5066499b1f7e">
+                    <propertyInstance
+                      Id="de9fe229-77ea-4d8b-933f-b082cb1b904a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40549162-3d04-404e-bea2-03d7981ba1fd">
+                    <propertyInstance
+                      Id="d6e6c0cb-1bd3-4675-b177-0f41a79515b3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5795cfb1-717a-4407-9f96-d4f0e6a07a68">
+                    <propertyInstance
+                      Id="40f1958a-5cca-4f65-8960-7f3d65eeee4f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ec6c8f7-6908-44ab-acc7-2685609a4cff">
+                    <propertyInstance
+                      Id="d2b12128-a600-4083-a493-cccd9ea3d8e0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1c857de7-3119-4d61-85d6-bcb26005b1bf"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="06658b08-c20b-4170-ad8c-eafbd017be73"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TId)]) ParameterIdentifier=id"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="37a6a570-d900-4884-8e37-7e024aa2895f"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b7984704-f346-4491-a453-946092a60f51"
+        name="Repository&lt;TEnt,TId&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="043dcb7f-c91a-45f7-a0ae-1a80e4163e1c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f21d1f0-c6cc-4b43-96c8-e0bb9e1ddda8">
+                <propertyInstance
+                  Id="7eda25e8-c472-4725-9027-a5a018af26f0"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="03d4cf91-afe2-417f-b0fa-fe738cbefd10">
+                <propertyInstance
+                  Id="98063a6e-5d06-4b49-b6a2-8271cb03551f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc83d709-47c9-43f3-b7e4-303d40f462fa">
+                <propertyInstance
+                  Id="2628c234-da58-40c9-acae-6ff061887b5e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="25c69236-acb4-433e-bae0-7af99f58f1f5">
+                <propertyInstance
+                  Id="cf478e61-5737-437a-a505-a690b68337c8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d47da0ae-b87e-4e05-a768-c81795897cbe">
+                <propertyInstance
+                  Id="faed9e70-9a5a-48f3-9ee3-695d54c4003e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="c6bbe4e4-bd09-4924-a2d1-22cf6cc229c0">
+            <interfaceMoniker
+              Id="3ee25d3f-d5d5-44b3-b97b-133f4646ac28"
+              LastKnownName="IRepository&lt;TEnt,TId&gt;"
+              LastKnownLocation="Package_1726.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <signatures>
+          <templateBinding
+            Id="eac5532f-fcf6-46c5-974f-5482df0cf92d">
+            <redefinableTemplateSignatureMoniker
+              Id="e8414d38-afa6-423c-9a96-b1b9a0141e57"
+              LastKnownLocation="Package_1726.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="acac6e6f-c083-4b8d-a418-011f78f7a174">
+                  <actuals>
+                    <classMoniker
+                      Id="8735c3f0-a45b-4fb9-8fb7-b285c48f89c0"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1725.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="7b2085e3-8fcf-4d67-8a47-127c6d34af7b"
+                      LastKnownLocation="Package_1726.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="ec6e8d1f-7cc7-41c9-8f6d-55bfb402ccc2">
+                  <actuals>
+                    <classMoniker
+                      Id="7a3dc796-7b4c-48ba-8b15-d8af429ab6ba"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package_1725.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="eae2bdb4-00be-4070-b1a2-79771ecd2e41"
+                      LastKnownLocation="Package_1726.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0dcb3363-4b9b-4ac2-8271-090c1fb44bed"
+        name="Repository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a224072f-3d9b-4e35-bdb3-c58102072f90"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="30be40d4-f8ab-449f-a39b-4cc28f9c7b45"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="45442075-a084-4f35-94a6-fd356d4daea3">
+                <propertyInstance
+                  Id="6af3a621-8875-4464-809d-6d66e93b2d6c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="041002a1-531f-4b03-bb70-d28ff0b3f051">
+                <propertyInstance
+                  Id="fc23fb39-abb3-4988-a717-9dd9f9797051"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="63b1052b-18d3-4566-a058-eecd2ed28fa2">
+                <propertyInstance
+                  Id="6e7f8c3e-ffb5-4468-83ed-9c9fc54784d7"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2cf1a531-9ebb-4d1d-800b-2d7015475ff1">
+                <propertyInstance
+                  Id="5c35a1bc-55bf-49bd-82f0-fff1392c3bb5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c356bf6c-3527-4d19-ae87-8f2a8c77133b">
+                <propertyInstance
+                  Id="4deeb43f-4ce3-462e-b6ad-6dd73b3b4061"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="7ccc07cd-dc32-4637-95bd-620a208a9e2e">
+            <interfaceMoniker
+              Id="3ee25d3f-d5d5-44b3-b97b-133f4646ac28"
+              LastKnownName="IRepository&lt;TEnt,TId&gt;"
+              LastKnownLocation="Package_1726.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="db08dbe2-eb24-46ec-bfde-82f8d8491a40">
+            <interfaceMoniker
+              Id="fc2b7922-943b-49d7-9c74-f8e51226a48f"
+              LastKnownName="IRepository"
+              LastKnownLocation="Package_1726.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="54001bbb-ba91-4711-820c-dc368ad72c33"
+            isDerived="false"
+            sourceEndRoleName="Repository"
+            targetEndRoleName="IRepository"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="fc2b7922-943b-49d7-9c74-f8e51226a48f"
+              LastKnownName="IRepository"
+              LastKnownLocation="Package_1726.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="23ff4c05-18c2-458d-9ae5-867fc7d0197e"
+                  name="Repository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ce620f1f-bc3c-4940-b298-6d0bf53fe0f9"
+                  name="IRepository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="e8414d38-afa6-423c-9a96-b1b9a0141e57"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="7b2085e3-8fcf-4d67-8a47-127c6d34af7b">
+                <referencesInternal>
+                  <reference
+                    Id="214ae920-54d9-4e5e-928d-c421452eb8fd"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) ParameterIdentifier=0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="9e1a2800-625f-4e68-99d5-cda677467c6d"
+                    name="TEnt"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="eae2bdb4-00be-4070-b1a2-79771ecd2e41">
+                <referencesInternal>
+                  <reference
+                    Id="19609225-ad05-4cd9-98a4-a9eba79c48bf"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) ParameterIdentifier=1"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="0687b0dd-85a5-4e60-90f7-1cc708762db7"
+                    name="TId"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="b31b249c-43b1-43c8-b61f-4362b9da0164"
+            name="Count"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="560514be-febb-4cbb-a026-2606342e2cdc"
+                handle="viewcode://./CodeSchema_Property?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=Count"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="02a7d164-d9f4-48d8-9bce-5aaacc7dd7a6"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a068de0a-4c40-4f39-9813-6bbee36c0ec0">
+                    <propertyInstance
+                      Id="427c0584-d687-46ab-b042-4985e8e2b08f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc4ce08d-9b52-4a56-8658-8023a614fbec">
+                    <propertyInstance
+                      Id="0124efea-79af-4ae9-8496-63603cbda729"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="deb2bd56-3bef-4370-9d7f-fbaa8bf0a0e5">
+                    <propertyInstance
+                      Id="d27637a4-bb63-4731-a5ad-f7a7a79af3bf"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="867c17df-3bbd-4d09-88a4-52db5a102f56">
+                    <propertyInstance
+                      Id="505c8819-2ac7-4ab9-9a0b-2ffdcd4e5b28"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec1d969b-6545-47e5-9e46-19b571aefdd1">
+                    <propertyInstance
+                      Id="e310b485-2372-44c4-853b-b3e8c02bf90e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2039cc2-d317-4cd0-bde1-cabc18481c18">
+                    <propertyInstance
+                      Id="a14fa0b9-6f41-4589-bca4-1ff904136974"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Informedica.DataAccess.Model.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3abae3a9-8658-454e-a09a-a4175695b919"
+            name="_repository"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f14ef033-1c8d-46b9-b1bf-12858c8ab2bc"
+                handle="viewcode://./CodeSchema_Field?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=_repository"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2c338835-8654-4041-8f36-d4137c40b423"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0dfbd69b-be9b-437a-8458-a029c4b4e83d">
+                    <propertyInstance
+                      Id="13fd45ab-4553-4cba-9f44-e3cd66c46686"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="acc44e90-6242-46a0-8d29-99d8e736af6a">
+                    <propertyInstance
+                      Id="27aee6f7-76b8-4d97-8baa-0b77d1c3b9fb"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cfa37c40-8d70-441c-9fca-5cd09dffdae5">
+                    <propertyInstance
+                      Id="7c4f8555-0862-4c26-99ad-cc216a71b573"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fedd65d7-3eef-4e3f-b9e0-bbc70622808d">
+                    <propertyInstance
+                      Id="02c96339-5d22-4dc5-998b-bb1271fbd7f4"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a38453e-b4f5-4b36-b50e-291a336c205e">
+                    <propertyInstance
+                      Id="f72946a1-efc6-44b8-b18c-6857a386eef6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="3ee25d3f-d5d5-44b3-b97b-133f4646ac28"
+                LastKnownName="IRepository&lt;TEnt,TId&gt;"
+                LastKnownLocation="Package_1726.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="500d2856-b96b-43a3-a62d-1ff13ed68bf9"
+            name="Repository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8c9ff78e-2b7c-44dd-80b9-6e927dd0af59"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2 GenericArguments=[(Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) ParameterIdentifier=0),(Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) ParameterIdentifier=1)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cf30a567-bbbe-4246-9fc9-2a62d472db56"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4fa91c4f-2773-48d3-8880-a4f62e07a3db">
+                    <propertyInstance
+                      Id="966bc4c7-dbf3-4e54-a723-2d4b07327d9f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6fd63559-be36-4f22-ac2b-2254bd437817">
+                    <propertyInstance
+                      Id="ae00b7df-ffc4-405e-a4ad-f41f06d5f3d3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62f5225f-6df5-4129-84a5-440181fabd98">
+                    <propertyInstance
+                      Id="d71ad709-1f8d-4239-852b-6bcc5f683ce4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25cc5824-64ca-4f13-87fa-1016cf7bd6b4">
+                    <propertyInstance
+                      Id="2cb3d26f-6849-4b18-84ec-ecebc894f8e8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4093224f-1fcd-4170-bf85-82d89b7655c0">
+                    <propertyInstance
+                      Id="66bcaffd-8151-4a85-a790-2252596276aa"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="95adc8f5-d47d-41b1-aba8-f13d494dadbd"
+                  name="repository"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1ab75391-64e3-47f2-9a6f-ac22ce1ac0c2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=IRepository GenericParameterCount=2 GenericArguments=[(Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) ParameterIdentifier=0),(Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) ParameterIdentifier=1)]))]) ParameterIdentifier=repository"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="3ee25d3f-d5d5-44b3-b97b-133f4646ac28"
+                      LastKnownName="IRepository&lt;TEnt,TId&gt;"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ecf986ab-bd01-4671-86ac-1632028b0893"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e9770d26-6216-43cb-8b41-89c911c85051"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=Add OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1a89980e-fe3e-4ca8-a516-e5c45f0f6cdb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="91b1cf25-c950-4cf1-b53b-d7cb30818d75">
+                    <propertyInstance
+                      Id="8ce36901-93fa-482a-a3ed-ced91830e385"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28ec0552-e9d1-4f16-8756-00ed11eb65af">
+                    <propertyInstance
+                      Id="ed34faad-b131-4843-9149-ba7139bf2be4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c38e8beb-839c-42ae-bd67-18847ef4b06a">
+                    <propertyInstance
+                      Id="e53d8ec4-7de1-43d7-abe4-2d5e3bf3ee39"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5eff13aa-b59f-480d-8724-981b0da620c1">
+                    <propertyInstance
+                      Id="62e750db-34ba-463c-9afb-5d926137bda9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c19176f2-f7a1-4853-9fb7-057f75330b71">
+                    <propertyInstance
+                      Id="f3297f06-8f68-4f10-acdd-c5e59e2fb715"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="04c711b0-768d-4317-94ce-b70504a31f47"
+                  name="entity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="08aa3653-cc2f-428a-aaa4-d4bb976e807f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=Add OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=entity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9e1a2800-625f-4e68-99d5-cda677467c6d"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="96c33e4a-e9f8-4b58-83fa-c8f95077d2da"
+            name="Contains"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9d7c5923-6b14-460b-9654-1ff82efdbb0e"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=Contains OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2ef3445c-03f5-41b3-bcdf-3aba1049833b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a87f0139-c42c-4f88-aacf-c774a8a09eac">
+                    <propertyInstance
+                      Id="cd3bb4b7-66ae-47ce-a7fb-6c668f56f8b2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90643165-6053-47c7-86ba-ba084d80125e">
+                    <propertyInstance
+                      Id="3bcd44c2-1cf3-493c-8b22-c6a9b4d1f52a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="643573c0-a158-489d-819d-b4ba8e081155">
+                    <propertyInstance
+                      Id="a016d252-c3ec-4d02-9510-285c27ec58ea"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97a60ba9-bc94-4072-87cc-13d78824d5a0">
+                    <propertyInstance
+                      Id="0395a800-2a1b-4b72-b24c-ad6c6aa57bff"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e76558da-82f1-4a9e-a6b4-9a83104b9fc0">
+                    <propertyInstance
+                      Id="78e27fe5-fbf5-465a-9e83-3e0f41b9c0bb"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5bf77a81-82f5-4e2d-bedc-159d931315d7"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Informedica.DataAccess.Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7d3f1539-4955-448a-9c8e-288edf405111"
+                  name="entity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="35e86e0a-7452-4b64-9d28-b197db426eb7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=Contains OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=entity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9e1a2800-625f-4e68-99d5-cda677467c6d"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b54fb9c7-ab4a-45cc-ac23-66b4084ce807"
+            name="ContainsEntity"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6fa716c2-e1b0-4ced-8f1d-1896d648fd49"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=ContainsEntity OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f060e3de-d3ba-4986-806c-19f0c5907d0f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7f1ab43-672d-4a01-a870-ca16391f6a31">
+                    <propertyInstance
+                      Id="2463db36-6946-4873-8d57-8f6383f63ca5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8754e830-3472-498f-bfac-05ca255343f1">
+                    <propertyInstance
+                      Id="6051e6ec-adb0-4bf3-9318-5d8bace520fb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae78cc86-29ea-42cf-96fb-f758a24cd0d9">
+                    <propertyInstance
+                      Id="231b23ec-649c-4a7b-9602-6df5ba15e08b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef9c0581-be32-4736-b91b-43140c5cd8dc">
+                    <propertyInstance
+                      Id="6f9828c9-90fe-4d51-94fd-96e53838a405"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="273ffff3-8ef8-445f-aa1b-e83002b454f5">
+                    <propertyInstance
+                      Id="3618072f-e9b5-49dc-ab33-e56909b15930"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dd6f16f2-de29-47eb-b581-4be6dc6d04bb"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Informedica.DataAccess.Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fb51e3c1-f1df-4b04-a216-d2e8be695c46"
+                  name="entity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9d93be96-d76e-4179-94a0-a9a846b50d25"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=ContainsEntity OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=entity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9e1a2800-625f-4e68-99d5-cda677467c6d"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3de27621-6a4e-4a40-b15a-602d4dd55887"
+            name="GetById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e5625444-ea6f-4c9c-93e1-aa5b2e955f01"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=GetById OverloadingParameters=[(Type=TId)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9087e66e-c2cb-4113-8803-9a5d5251728d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66983781-fa01-4c59-97d8-06e424db3b85">
+                    <propertyInstance
+                      Id="ec1be597-480e-46a0-a26f-c800894ad4f9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f497056-3a73-4384-b64e-4f4f5fd3eb39">
+                    <propertyInstance
+                      Id="84143fed-f140-487e-ba8f-dfbdb54a885f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da9b1247-49cf-4eaf-a80f-f345c947046c">
+                    <propertyInstance
+                      Id="479c6e29-1ac4-46bc-a7ab-f2f760c0ba9f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4c3838c-2879-4e97-9a99-a7d5728e147c">
+                    <propertyInstance
+                      Id="2d48a80e-5b85-45f2-ac1c-83a883e98deb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9093fed-115b-49f5-b37e-3d0e0e1c737f">
+                    <propertyInstance
+                      Id="3b2752ff-0ecf-4c67-80ea-3f49c9aef043"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="64319750-7920-4c61-a115-e339961be2ab"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9e1a2800-625f-4e68-99d5-cda677467c6d"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="67719b45-db74-4075-bbc8-97909ef8fcdd"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="02a23bd1-b5bd-4cb5-a526-f52868369941"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=GetById OverloadingParameters=[(Type=TId)]) ParameterIdentifier=id"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0687b0dd-85a5-4e60-90f7-1cc708762db7"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bf90286e-1b44-43db-88da-10b54c0ae1f8"
+            name="IEnumerable.GetEnumerator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bc2e23f1-520f-4c1c-836d-3c6343c2a78f"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=GetEnumerator ExplicitInterface=(Assembly=&quot;file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System.Collections Type=IEnumerable))"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3b7ab674-546f-4aa4-880b-10f102d499c8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbcbd249-7af4-47ee-8f22-5caf0d79c15f">
+                    <propertyInstance
+                      Id="0877a545-9840-40ff-b411-e885a03d8f76"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f420ad0-bd27-458c-ae0e-9a7390d00fe6">
+                    <propertyInstance
+                      Id="aaea2c0a-8a5e-43b1-ba30-e902ce6fbf25"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c03607d5-a6db-4047-876b-a52b03c221e0">
+                    <propertyInstance
+                      Id="4d3864f9-89a6-4963-adce-811bad02c8f2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="403e7859-d647-40e1-8716-4d8c31ab6da5">
+                    <propertyInstance
+                      Id="26501d8f-f2cb-47e0-ab7e-3dd436aaf7cf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="055baae7-9909-4c67-b928-9f18c32f1a1c">
+                    <propertyInstance
+                      Id="01b3ea8c-e18d-4c0e-a317-36c3ce4caf49"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6ca25d10-450a-4456-a9ba-5e0bde041b3d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="0a328252-43ae-4ccd-abf2-3a537de308f6"
+                      LastKnownName="IEnumerator"
+                      LastKnownLocation="Package8_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2e29fe03-1711-42f2-ae7d-65a5b2c7fcf7"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="003b057a-bf32-42f8-998d-2659ff5bb388"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TEnt)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f1d91793-7383-4a1e-9179-8091bc641638"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b119f5d6-66ed-45c7-9312-7f3a0b8e1cc9">
+                    <propertyInstance
+                      Id="de119fe1-56ef-4138-9050-189846a23bc7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39fc5166-502c-42b3-92ef-b0569442ed1d">
+                    <propertyInstance
+                      Id="17e3a380-ff40-4abf-8679-5a5abd691098"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a3793b2-48a3-491e-b0dd-1cc1c435cf94">
+                    <propertyInstance
+                      Id="15d37ae5-26e9-4591-89a2-885aad186030"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2eb7976e-1385-43da-b163-de223c83aa5a">
+                    <propertyInstance
+                      Id="02fc4dbe-fe17-40e7-b766-8958c44373f8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6877bb67-150b-4264-9762-ce0d27b36dff">
+                    <propertyInstance
+                      Id="2bc34d8c-6aab-487c-a1ff-270830555cd0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="17475244-718a-4c2d-ad25-d48378562f7e"
+                  name="entity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d67a2468-5235-418b-a878-138fc130a1c6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TEnt)]) ParameterIdentifier=entity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9e1a2800-625f-4e68-99d5-cda677467c6d"
+                      LastKnownName="TEnt"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="af55e12a-48bc-4190-9049-41018ca3e028"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d8c3ed08-5139-4188-8524-78245a127eec"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TId)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7f499f22-58aa-4eea-bb40-b1131cbed929"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7231d7a6-3055-48b2-bf71-6c6439a47027">
+                    <propertyInstance
+                      Id="c66108fe-d22d-489d-812a-aba9764652ba"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b22c2ed9-769d-46cb-9acf-e7178bd660fa">
+                    <propertyInstance
+                      Id="22d816cd-253c-4e57-b80f-78cac19f3fef"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb1ab924-e823-4816-a621-a9bd0f5897ec">
+                    <propertyInstance
+                      Id="4fb542be-32fb-4193-a800-4e353db91148"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="362205e0-2862-44d9-bdab-2b8e8f66db3f">
+                    <propertyInstance
+                      Id="4014e277-6b8f-4ef0-8a81-e54e60c6e0a1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbe3d212-c670-472b-964f-228637a44a82">
+                    <propertyInstance
+                      Id="3622a697-6ace-43bb-8381-3ebcef70c91b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6006c5d1-62c5-4bd1-9564-c1b26b44f7ae"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b9d7fdcc-9b37-48c1-9444-36eec7e3accb"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=(Name=Remove OverloadingParameters=[(Type=TId)]) ParameterIdentifier=id"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0687b0dd-85a5-4e60-90f7-1cc708762db7"
+                      LastKnownName="TId"
+                      LastKnownLocation="Package_1726.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8732881e-3ca0-40e4-92cf-fc2845517e5a"
+            name="GetEnumerator"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f4240dd2-a685-4b43-94e2-23388a8f3492"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/Development/EntityRepository/Informedica.EntityRepository/bin/Debug/Informedica.EntityRepository.dll Namespace=Informedica.EntityRepository Type=(Name=Repository GenericParameterCount=2) Member=GetEnumerator"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7d13b839-5113-434a-9e57-7e2cbb9d65cf"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9afd8e9b-7c43-4f8e-954f-70797d051f1e">
+                    <propertyInstance
+                      Id="9a03ec88-7be9-4c9e-8920-33db6e89999f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="024d0e6c-7136-4a7d-a1dd-df6fcebf1cbb">
+                    <propertyInstance
+                      Id="8bd09b4c-d491-4104-9f0d-4a5c4e044336"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be46c3b8-02a0-436b-923a-5273089b3db9">
+                    <propertyInstance
+                      Id="0a7edce2-90bc-49ba-adb3-351b26fec1dc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="376cdcb5-80b1-4bca-9ae8-7374987426fb">
+                    <propertyInstance
+                      Id="d2448925-e570-491a-95d5-6d0fd823ed25"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6b93d07-ff91-48d4-b25c-1ad47d50a750">
+                    <propertyInstance
+                      Id="28674b81-5988-41f1-af90-9c15843ae8f0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f375943-824d-41a7-a6ab-3b6fc11066fc"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="d9ea20e2-c299-4dda-9639-26dfd704f9d8"
+                      LastKnownName="IEnumerator&lt;TEnt&gt;"
+                      LastKnownLocation="Package9_1539.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

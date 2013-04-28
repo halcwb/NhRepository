@@ -1,13 +1,46 @@
-﻿using Informedica.EntityRepository;
+﻿using Informedica.DataAccess.Configurations;
+using Informedica.EntityRepository;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TypeMock.ArrangeActAssert;
 
 namespace Informedica.DataAccess.Tests
 {
     [TestClass]
-    public class AnEntityRepositoryShould
+    public class AnEntityRepositoryShould: InMemorySqLiteTestBase
     {
         private static readonly EntityRepository.Testing.AnEntityRepositoryShould Tests = new EntityRepository.Testing.AnEntityRepositoryShould();
+        private IRepository<TestEntity, int> _repos;
+        private ConfigurationManager _confMan;
+        private static IConnectionCache _cache;
 
+        [ClassInitialize]
+        public static void MyClassInitialize(TestContext testContext)
+        {
+            _cache = new TestConnectionCache();
+        }
+
+        public override IConnectionCache Cache
+        {
+            get { return _cache; }
+        }
+
+        [TestInitialize]
+        public void Init()
+        {
+            InitCache();
+
+            _confMan = ConfigurationManager.Instance;
+            Isolate.WhenCalled(() => _confMan.AddInMemorySqLiteEnvironment<TestMapping>("T")).CallOriginal();
+            _repos = RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>("Test");
+        }
+
+        [TestCleanup]
+        public void Cleanup()
+        {
+            _cache.Clear();
+        }
+
+        [Isolated]
         [TestMethod]
         public void ThrowAnErrorWhenInitiatedWithAnNullReference()
         {
@@ -19,75 +52,71 @@ namespace Informedica.DataAccess.Tests
             new Repository<TestEntity, int>(null);
         }
 
+        [Isolated]
         [TestMethod]
         public void HaveZeroItemsWhenFirstCreated()
         {
-            var repos = GetRepository();
-            Tests.HaveZeroItemsWhenFirstCreated(repos);
+            Tests.HaveZeroItemsWhenFirstCreated(_repos);
         }
 
-        private static IRepository<TestEntity, int> GetRepository()
-        {
-            return RepositoryFixture.CreateInMemorySqLiteRepository<TestMapping>("Test");
-        }
-
+        [Isolated]
         [TestMethod]
         public void ThrowAnErrorWhenANullReferenceIsAdded()
         {
-            var repos = GetRepository();
-            Tests.ThrowAnErrorWhenANullReferenceIsAdded(repos);
+            Tests.ThrowAnErrorWhenANullReferenceIsAdded(_repos);
         }
 
+        [Isolated]
         [TestMethod]
         public void HaveOneItemWhenAnEntityIsAdded()
         {
-            var repos = GetRepository();
             var ent = EntityFixture.CreateEntityWithId(1);
 
-            Tests.HaveOneItemWhenAnEntityIsAdded(repos, ent);
+            Tests.HaveOneItemWhenAnEntityIsAdded(_repos, ent);
         }
 
+        [Isolated]
         [TestMethod]
         public void ReturnTheEntityThatWasAdded()
         {
-            var repos = GetRepository();
             var ent = EntityFixture.CreateIntIdEntity();
 
-            Tests.ReturnTheEntityThatWasAdded(repos, ent);
+            Tests.ReturnTheEntityThatWasAdded(_repos, ent);
         }
 
+        [Isolated]
         [TestMethod]
         public void HaveTwoItemsWhenTwoEntitiesAreAdded()
         {
-            var repos = GetRepository();
             var ent1 = EntityFixture.CreateEntityWithId(1);
             var ent2 = EntityFixture.CreateEntityWithId(2);
 
             ent1.Name = "Entity1";
             ent2.Name = "Entity2";
 
-            Tests.HaveTwoItemsWhenTwoEntitiesAreAdded(repos, ent1, ent2);
+            Tests.HaveTwoItemsWhenTwoEntitiesAreAdded(_repos, ent1, ent2);
         }
 
+        [Isolated]
         [TestMethod]
         public void NotAcceptTheSameEntityTwice()
         {
-            var repos = GetRepository();
             var ent = EntityFixture.CreateEntityWithId(1);
                 
-            Tests.NotAcceptTheSameEntityTwice(repos, ent);
+            Tests.NotAcceptTheSameEntityTwice(_repos, ent);
         }
 
+        [Isolated]
         [TestMethod]
         public void NotAcceptADifferentEntityWithTheSameId()
         {
             var ent1 = EntityFixture.CreateEntityWithId(1);
             var ent2 = EntityFixture.CreateEntityWithId(1);
-            var repos = GetRepository();
             
-            Tests.NotAcceptADifferentEntityWithTheSameId(repos, ent1, ent2);
+            Tests.NotAcceptADifferentEntityWithTheSameId(_repos, ent1, ent2);
         }
 
+        [Isolated]
         [TestMethod]
         public void ReturnAnEntityById()
         {
@@ -95,54 +124,52 @@ namespace Informedica.DataAccess.Tests
             ent1.Name = "Entity1";
             var ent2 = EntityFixture.CreateEntityWithId(2);
             ent2.Name = "Entity2";
-            var repos = GetRepository();
             
-            Tests.ReturnAnEntityById(repos, ent1, ent2);
+            Tests.ReturnAnEntityById(_repos, ent1, ent2);
         }
 
+        [Isolated]
         [TestMethod]
         public void NotAcceptAnEntityWithTheSameIdentityTwice()
         {
             var ent1 = EntityFixture.CreateEntityWithId(1);
             var ent2 = EntityFixture.CreateEntityWithId(2);
-            var repos = GetRepository();
             
-            Tests.NotAcceptAnEntityWithTheSameIdentityTwice(repos, ent1, ent2);
+            Tests.NotAcceptAnEntityWithTheSameIdentityTwice(_repos, ent1, ent2);
         }
 
+        [Isolated]
         [TestMethod]
         public void RemoveTestEntity()
         {
             var ent1 = EntityFixture.CreateEntityWithId(1);
-            var repos = GetRepository();
             
-            Tests.RemoveTestEntity(repos, ent1);
+            Tests.RemoveTestEntity(_repos, ent1);
         }
 
+        [Isolated]
         [TestMethod]
         public void RemoveTestEntityById()
         {
             var ent1 = EntityFixture.CreateEntityWithId(1);
-            var repos = GetRepository();
             
-            Tests.RemoveTestEntityById(repos, ent1);
+            Tests.RemoveTestEntityById(_repos, ent1);
         }
 
+        [Isolated]
         [TestMethod]
         public void ThrowAnErrorWhenTryingToRemoveNullReference()
-        {
-            var repos = GetRepository();
-            
-            Tests.ThrowAnErrorWhenTryingToRemoveNullReference(repos);
+        {            
+            Tests.ThrowAnErrorWhenTryingToRemoveNullReference(_repos);
         }
 
+        [Isolated]
         [TestMethod]
         public void ThrowAnErrorWhenTryingToRemoveNonAddedEntity()
         {
             var ent = EntityFixture.CreateIntIdEntity();
-            var repos = GetRepository();
             
-            Tests.ThrowAnErrorWhenTryingToRemoveNonAddedEntity(repos, ent);
+            Tests.ThrowAnErrorWhenTryingToRemoveNonAddedEntity(_repos, ent);
         }
 
     }

@@ -2,7 +2,7 @@ using System.Data;
 using FluentNHibernate.Cfg.Db;
 using Informedica.DataAccess.Configurations;
 
-namespace Informedica.DataAccess.Databases
+namespace Informedica.DataAccess.Configurations
 {
     public class MsSql2008Config : IDatabaseConfig
     {

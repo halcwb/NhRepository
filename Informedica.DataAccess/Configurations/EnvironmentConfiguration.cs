@@ -1,5 +1,4 @@
 using System.Data;
-using Informedica.DataAccess.Databases;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
@@ -12,18 +11,23 @@ namespace Informedica.DataAccess.Configurations
         private readonly IDatabaseConfig _databaseConfig;
         private static ISessionFactory _factory;
 
-        public EnvironmentConfiguration(string testEnv, Configuration config, IDatabaseConfig dbConfig)
+        public EnvironmentConfiguration(string name, Configuration config, IDatabaseConfig dbConfig)
         {
             _databaseConfig = dbConfig;
             _configuration = config;
-            EnvironmentName = testEnv;
+            EnvironmentName = name;
         }
 
         public string EnvironmentName { get; private set; }
 
         public ISessionFactory GetSessionFactory()
         {
-            return _factory ?? (_factory = _configuration.BuildSessionFactory());
+            if (_factory == null)
+            {
+                _factory = _configuration.BuildSessionFactory();
+            }
+
+            return _factory;
         }
 
         public void BuildSchema()
@@ -38,9 +42,21 @@ namespace Informedica.DataAccess.Configurations
 
         public void BuildSchema(IDbConnection connection)
         {
-            new SchemaExport(_configuration).Execute(true, true, false, connection, null);            
+            try
+            {
+                new SchemaExport(_configuration).Execute(true, true, false, connection, null);
+
+            }
+            catch (System.Exception e)
+            {
+                throw e;
+            }
         }
 
-    
+
+        public IDbConnection GetConnection()
+        {
+            return _databaseConfig.GetConnection();
+        }
     }
 }

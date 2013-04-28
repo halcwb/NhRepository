@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using FluentNHibernate.Cfg;
-using Informedica.DataAccess.Databases;
 using NHibernate.Cfg;
 using NHibernate.Context;
 
@@ -11,9 +10,8 @@ namespace Informedica.DataAccess.Configurations
 {
     /// <summary>
     /// The responsibility of the ConfigurationManager class is
-    /// to create a specific SessionFactory. To create a spedific mapping
-    /// it needs a Database configurer and a Fluentconfiguration or an NHibernate
-    /// fluentConfig.
+    /// to manage a collection of environment configurations.
+    /// An environment configuration can be added or removed.
     /// </summary>
     public class ConfigurationManager
     {
@@ -64,7 +62,9 @@ namespace Informedica.DataAccess.Configurations
 
         public void AddInMemorySqLiteEnvironment<TMap>(string name)
         {
-            var dbConfig = new SqlLiteConfig();
+            if (_configurations.Keys.Contains(name)) return;
+            
+            var dbConfig = new SqLiteConfig();
             var config = GetFluentConfig<TMap>();
 
             AddConfiguration(name, config, dbConfig);

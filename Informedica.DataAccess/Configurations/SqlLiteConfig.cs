@@ -1,7 +1,6 @@
 ﻿using System.Data;
 using System.Data.SQLite;
 using FluentNHibernate.Cfg.Db;
-using Informedica.DataAccess.Databases;
 
 namespace Informedica.DataAccess.Configurations
 {

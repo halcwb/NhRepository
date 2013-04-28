@@ -1,5 +1,6 @@
 using System.Data;
 using FluentNHibernate.Cfg.Db;
+using Informedica.DataAccess.Configurations;
 
 namespace Informedica.DataAccess.Databases
 {
